@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-CA">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta title="Login Page">
         <meta name="author" content="Antony Zhang & Ali Soufi">
         <meta name="description" content="About the creators of Refugee Pal">
         <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
@@ -14,11 +15,46 @@
             <h2>Welcome!</h2>
         <main>
             <h2>Sign in</h2>
-                <a href="homepage.html">As a refugee</a><br>
-                <a href="homepage.html">As a helper</a>
-            <h2>Or sign up</h2>
-                <a href="homepage.html">As a refugee</a><br>
-                <a href="homepage.html">As a helper</a>
+                <form action="https://httpbin.org/get" method="get">
+                    <p>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" autocomplete="on" required autofocus>
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" autocomplete="off" required>
+                    </p>
+                </form>
+            <h2>Or create an account:</h2>
+                <form action="https://httpbin.org/get" method="get">
+                    <p>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" required autofocus>
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" autocomplete="off" required>
+                    </p>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <p>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </p>
+                        <p>
+                            <label for="phone">Phone (optional)</label>
+                            <input type="tel" name="phone" id="phone" placeholder="1234567890" pattern="[0-9]{10}">
+                        </p>
+                        <p>
+                            <label for="id">I am a...</label>
+                            <select type="id" id="id" required>
+                                <option value="Refugee">Refugee</option>
+                                <option value="Helper">Helper</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                </form>
+            <h2><a href="homepage.html">Done</a></h2>
         </main>
         <footer>
             <hr><p>&lt;&lt;&lt;&COPY; Antony Zhang and Ali Soufi, 2023 &gt;&gt;&gt;</p>
