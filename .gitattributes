@@ -1,2 +1,60 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en-CA">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <meta name="author" content="Antony Zhang & Ali Soufi">
+        <meta name="description" content="About the creators of Refugee Pal">
+        <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+    </head>
+    
+    <body>
+
+        <header>
+            <h1>Refugee Pal</h1><br>
+            <nav>
+                <h3><a href="homepage.html">Home&nbsp;</a>
+                <a href="landing.html">Log Out&nbsp;</a></h3>
+            </nav>
+        </header>
+
+        <main>
+            <hr>
+            <h1>About Us</h1>
+
+                <h2>Who are we?</h2>
+
+                    <img src="images/IMG_9982.jpg" width="250" alt="antony"> <img src="images/IMG_9983.jpg" width="250" alt="ali">
+                    <p>Our names are Antony and Ali. We are two Grade 8 students at <abbr title="Surrey Academy of Innovative Learning">SAIL</abbr> who have a passion for helping refugees.</p>
+                <section>
+                    <h2>The story behind Refugee Pal</h2>
+                        <p>Did you know that Refugee Pal started off as a science project? In January of 2023, we were tasked with coming up with an innovation for the upcoming science fair at our school. Many ideas came, and were promptly discarded when they proved to be not good enough. However, we ended up settling on Refugee Pal. We both wanted to help refugees who had been forced to leave their homes. When arriving in Canada, they face many difficulties getting the help they need. Ali wanted to code an app to solve this problem, we partnered up and Refugee Pal was born.</p>
+                        <figure>
+                            <img src="images/funny.png" width="600" alt="antony and ali chatting on discord" loading="lazy">
+                            <figcaption>Ali and Antony agreeing to work on the project together.</figcaption>
+                        </figure>
+                </section>
+                <section>
+                    <h2>Development Diaries</h2>
+                        
+                    <h3><time datetime="2023-01-16">Jan 16</time> - The Year of the Bunny</h3>
+                    <p>After the successful ISSofBC interview where we finally figured out which features to add to this website, we parted ways. While Ali got warm at the McDonalds around the corner, I spotted a bunny peeking out of a bush right outside the ISSofBC office. Unfortunately, we later realized that we forgot to take a photo of ourselves at ISSofBC. If you need proof, consult the bunny.</p>
+                    <img src="images/bunny.jpg" width="225" alt="bunny on lawn" loading ="lazy"><img src="images/mcdonalds.jpg" width="400" alt="mcdonalds" loading="lazy">
+                </section>
+                <section>
+                <h2>Credits</h2>
+                    <ul>
+                        <li><h3>Many thanks to Mr. Burdett and Ms. Sidhu, the best teachers we've ever had.</h3></li>
+                        <li><h3>Many thanks to the folks at ISSofBC, who were always there to answer any questions we had about refugees.</h3></li>
+                        <li><h3>Thank you Noah for providing all the technical advice we ever needed.</h3></li>
+                    </ul>
+                </section>
+                <section>
+                <h2>Contact Us</h2>
+                    <a href="mailto:antonyzhangg@gmail.com">Email</a>
+                </section>
+        </main>
+        <footer>
+            <hr><p>&lt;&lt;&lt;&COPY; Antony Zhang and Ali Soufi, 2023 &gt;&gt;&gt;</p>
+        </footer>
+    </body>
+</html>
