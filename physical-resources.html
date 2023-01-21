@@ -2,6 +2,7 @@
 <html lang="en-CA">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <meta title="Physical Resources">
         <meta name="author" content="Antony Zhang & Ali Soufi">
         <meta name="description" content="About the creators of Refugee Pal">
         <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
@@ -16,19 +17,25 @@
                 <a href="about us.html" target="_blank">About Us&nbsp;</a>
                 <a href="landing.html">Log Out&nbsp;</a></h3>
             </nav>
+            <form action="https://httpbin.org/get" method="get">
+                <input type="search" name="searchBar" id="searchBar" required autofocus placeholder="Search...">
+            </form>
         </header>
 
         <main>
             <hr>
-            <section>
-                <details>
-                    <summary>Mosques</summary>
-                    <table>
+            <details>
+                <summary>Mosques</summary>
+                <table>
+                    <caption>Mosques and Islamic Centres</caption>
+                    <thead>
                         <tr>
                             <th>Name</th>
                             <th>Address</th>
                             <th>Phone</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>Masjid Al-Noor</td>
                             <td><address>13526 98A Ave, Surrey, BC V3T 1C8</address></td>
@@ -54,17 +61,22 @@
                             <td><address>7375 144 St, Surrey, BC V3W 5S7</address></td>
                             <td>+7785643717</td>
                         </tr>
-                    </table>
-                </details>
-                <hr>
-                <details>
-                    <summary>Employment</summary>
-                    <table>
+                    </tbody>
+                </table>
+            </details>
+            <hr>
+            <details>
+                <summary>Employment</summary>
+                <table>
+                    <caption>Employment Services</caption>
+                    <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Phone</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Phone</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>Guildford WorkBC</td>
                             <td><address>10334 152A St #202, Surrey, BC V3R 7P8</address></td>
@@ -77,8 +89,8 @@
                         </tr>
                         <tr>
                             <td>Whalley WorkBC</td>
-                            <td><address>12407 72 Ave, Surrey, BC V3W 2M5</address></td>
-                            <td>+6045967834</td>
+                            <td><address>10362 King George Blvd #160, Surrey, BC V3T 2W5</address></td>
+                            <td>+16045840003</td>
                         </tr>
                         <tr>
                             <td>Newton WorkBC</td>
@@ -90,9 +102,9 @@
                             <td><address>7134 King George Blvd #200, Surrey, BC V3W 5A3</address></td>
                             <td>+7785919334</td>
                         </tr>
-                    </table>
-                </details>
-            </section>
+                    </tbody>
+                </table>
+            </details>
         </main>
         <footer>
             <hr><p>&lt;&lt;&lt;&COPY; Antony Zhang and Ali Soufi, 2023 &gt;&gt;&gt;</p>
