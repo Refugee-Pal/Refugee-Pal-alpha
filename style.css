@@ -22,28 +22,6 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 
-.employment {
-    background-color: rgb(94, 94, 94);
-    -webkit-text-fill-color: white;
-    font-weight: 500;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    outline: 1px solid;
-    box-sizing: border-box;
-    margin: 0.5rem 0rem;
-}
-
-.mosques {
-    background-color:rgb(28, 29, 28);
-    font-weight: 500;
-    -webkit-text-fill-color: white;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    outline: 1px solid;
-    box-sizing: border-box;
-    margin: 0.5rem 0rem;
-}
-
 .footer {
 font-weight: lighter;
 font-family: monospace; 
@@ -89,4 +67,36 @@ a:hover {
 .foot {
     font-size: 0.85rem;
     font-family: monospace;
+}
+
+.employment {
+    background-color:rgb(28, 29, 28);
+    font-weight: 500;
+    color: white;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    outline: 1px solid;
+    box-sizing: border-box;
+    margin: 0.5rem 0rem;
+}
+
+.mosques {
+    background-color:rgb(28, 29, 28);
+    font-weight: 500;
+    color: white;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    outline: 1px solid;
+    box-sizing: border-box;
+    margin: 0.5rem 0rem;
+}
+
+.mosques:hover {
+    background-color: grey;
+    color: white;
+}
+
+.employment:hover {
+    background-color: grey;
+    color: white;
 }
