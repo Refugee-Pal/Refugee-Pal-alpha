@@ -26,6 +26,7 @@ font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 0.3em;
     outline: 1px solid;
     box-sizing: border-box;
+    margin: 0.5rem 0rem;
 }
 
 .mosques {
@@ -36,6 +37,7 @@ font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 0.3em;
     outline: 1px solid;
     box-sizing: border-box;
+    margin: 0.5rem 0rem;
 }
 
 .footer {
@@ -50,5 +52,10 @@ width: 100ch;
 
 nav {
 outline: 1px solid;
-outline-offset: 0.4em;
+outline-offset: 0.5rem;
+margin: 1.5rem 0rem;
+}
+
+.guide {
+padding: 0.5rem;
 }
