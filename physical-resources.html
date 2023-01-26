@@ -16,27 +16,32 @@
         <meta title="Physical Resources">
         <meta name="author" content="Antony Zhang & Ali Soufi">
         <meta name="description" content="About the creators of Refugee Pal">
+<<<<<<< HEAD
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
+=======
+        <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+        <link rel="stylesheet" href="style.css">
+>>>>>>> a6abf791ab5297ab27c0e5698892f8bbb0d3f4dc
     </head>
     
     <body>
 
         <header>
-            <h1>Refugee Pal</h1><br>
+            <h1>Refugee Pal</h1>
             <nav>
                 <h3><a href="homepage.html">Home&nbsp;</a>
                 <a href="about us.html" target="_blank">About Us&nbsp;</a>
-                <a href="landing.html">Log Out&nbsp;</a></h3>
+                <a href="landing.html">Log Out&nbsp;</a>
+                <a href="guides.html">Guides&nbsp;</a></h3>
+                <form action="https://httpbin.org/get" method="get">
+                    <input type="search" name="searchBar" id="searchBar" required autofocus placeholder="Search...">
+                </form>
             </nav>
-            <form action="https://httpbin.org/get" method="get">
-                <input type="search" name="searchBar" id="searchBar" required autofocus placeholder="Search...">
-            </form>
         </header>
 
         <main>
-            <hr>
             <details>
-                <summary>Mosques</summary>
+                <summary class="mosques">Mosques</summary>
                 <table>
                     <caption>Mosques and Islamic Centres</caption>
                     <thead>
@@ -75,9 +80,8 @@
                     </tbody>
                 </table>
             </details>
-            <hr>
             <details>
-                <summary>Employment</summary>
+                <summary class="employment">Employment</summary>
                 <table>
                     <caption>Employment Services</caption>
                     <thead>
@@ -101,7 +105,7 @@
                         <tr>
                             <td>Whalley WorkBC</td>
                             <td><address>10362 King George Blvd #160, Surrey, BC V3T 2W5</address></td>
-                            <td>+16045840003</td>
+                            <td>+6045840003</td>
                         </tr>
                         <tr>
                             <td>Newton WorkBC</td>
@@ -118,7 +122,7 @@
             </details>
         </main>
         <footer>
-            <hr><p>&lt;&lt;&lt;&COPY; Antony Zhang and Ali Soufi, 2023 &gt;&gt;&gt;</p>
+            <hr><p class="footer">&lt;&lt;&lt;&COPY; Antony Zhang and Ali Soufi, 2023 &gt;&gt;&gt;</p>
         </footer>
     </body>
 </html>
