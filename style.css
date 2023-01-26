@@ -36,3 +36,7 @@ line-height: 1.25;
 width: 100ch;
 }
 
+nav {
+outline: 1px solid;
+outline-offset: 7px;
+}
