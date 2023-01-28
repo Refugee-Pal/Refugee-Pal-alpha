@@ -9,9 +9,6 @@ font-size: 1.18rem;
 color: rgb(55, 10, 15)
 }
 
-body {
-margin-top: 0;
-}
 
 h1 {
 color: rgb(255, 255, 255);
@@ -102,6 +99,5 @@ a:hover {
 
 .black{
     background-color: black;
-    padding-top:0.01rem;
-    margin:0;
-    }
+    padding-top:0.1rem;
+}
