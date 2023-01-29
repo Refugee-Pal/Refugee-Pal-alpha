@@ -11,20 +11,38 @@
 
     <body>
         <header>
-            <div class="black"><h1>Refugee Pal</h1>
+            <!-- <div class="black"><h1>Refugee Pal</h1>
             <nav>
                 <h3 class="taskbar"><a href="homepage.html">&nbsp;Home&nbsp;</a>
                 <a href="about us.html">&nbsp;Inspiration&nbsp;</a>
                 <a href="physical-resources.html">&nbsp;Physical Resources&nbsp;</a>
                 <a href="landing.html">&nbsp;Log Out&nbsp;</a>
                 <a href="guides.html">&nbsp;Guides&nbsp;</a></h3></div>
-                <form action="https://httpbin.org/get" method="get"></h3>
-                    <input type="search" name="searchBar" id="searchBar" required autofocus placeholder="Search...">
-                </form>
+            </nav> -->
+            <nav class="black">
+                <span>Refugee Pal</span>
+                <a href="landing.html">&nbsp;&nbsp;Log Out&nbsp;&nbsp;</a>
+                <a href="about us.html">&nbsp;&nbsp;Inspiration&nbsp;&nbsp;</a>
+                <a href="guides.html">&nbsp;&nbsp;Guides&nbsp;&nbsp;</a>
+                <a href="physical-resources.html">&nbsp;&nbsp;Find&nbsp;&nbsp;</a>
+                <a href="homepage.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
             </nav>
         </header>
         <main>
-            <h3><em><p>Welcome back, <strong>Walter White</strong></p></em></h3>
+            <img src="images/placeholder-1450x450.jpg" alt="placeholder">
+            <form class="mainSearch" action="https://httpbin.org/get" method="get">
+                <input type="search" name="searchBar" id="searchBar" class="mainSearch" required autofocus placeholder="Find anything...">
+            </form>
+            <ul class="homeList left">
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+                <li><a href="#">Category 4</a></li>
+            </ul>
+            <ul class="homeList right">
+                <li class="right"><a href="#">Event 1</a></li>
+                <li class="right"><a href="#">Event 2</a></li>
+            </ul>
         </main>
         <footer>
             <hr><p class="foot">&lt;&lt;&lt;&COPY; Antony Zhang and Ali Soufi, 2023 &gt;&gt;&gt;</p>
