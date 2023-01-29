@@ -90,12 +90,7 @@ li {
     background-color:black;
 }
 
-li a {
-    color: white;
-    text-decoration: none;
-}
-
-li:hover {
+li:hover, td a.card:hover {
     background-color: grey;
 }
 
@@ -128,11 +123,19 @@ summary.guide, div.guide {
     padding-left: 5vw;
 } 
 
-td.card {
+td.lcard {
     border-right: 1px solid;
+    vertical-align: top;
     display: flexbox;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+td a.card, li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    overflow: hidden;
 }
 td.guide {
     display: flexbox;
@@ -141,6 +144,13 @@ td.guide {
     flex-wrap: wrap;
 }
 
+a.card {
+    display: inline-flex;
+    width: 13vw;
+    height: 13vw;
+    text-align: center;
+    background-color:black;
+}
 .homeList {
     display: inline;
 }
