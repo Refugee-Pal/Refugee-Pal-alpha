@@ -171,6 +171,7 @@ a.card {
     padding-bottom: 0.15em;
     border: 1px solid;
     margin: 0.2rem 0rem;
+    border-radius: 15px;
 
 }
 
@@ -182,3 +183,4 @@ a.card {
     color:white;
     font-size: 2rem;
 }
+
