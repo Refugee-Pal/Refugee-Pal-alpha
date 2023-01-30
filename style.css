@@ -153,6 +153,7 @@ a.card {
 }
 .homeList {
     display: inline;
+    border-radius: 5px;
 }
 
 .initial {
@@ -184,3 +185,8 @@ a.card {
     font-size: 2rem;
 }
 
+.categories {
+border-radius: 5px;
+text-align: center;
+fill: black;
+}
