@@ -7,12 +7,58 @@
         <meta name="description" content="About the creators of Refugee Pal">
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
+        <style>
+                #search-container {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-top: 5px;
+                }
+
+                form {
+                  display: flex;
+                  align-items: center;
+                  background-color: #f2f2f2;
+                  padding: 10px;
+                  border-radius: 5px;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                }
+              
+                input[type="text"] {
+                  width: 60%;
+                  padding: 10px;
+                  border: none;
+                  font-size: 18px;
+                  margin-right: 10px;
+                }
+              
+                button[type="submit"] {
+                  width: 20%;
+                  padding: 10px;
+                  background-color: #2c2d2c;
+                  color: #fff;
+                  border: none;
+                  font-size: 18px;
+                  cursor: pointer;
+                }
+
+                </style>
     </head>
 
     <body>
         <header>
+            <!-- <div class="black"><h1>Refugee Pal</h1>
+            <nav>
+                <h3 class="taskbar"><a href="homepage.html">&nbsp;Home&nbsp;</a>
+                <a href="about us.html">&nbsp;Inspiration&nbsp;</a>
+                <a href="physical-resources.html">&nbsp;Physical Resources&nbsp;</a>
+                <a href="landing.html">&nbsp;Log Out&nbsp;</a>
+                <a href="guides.html">&nbsp;Guides&nbsp;</a></h3></div>
+            </nav> -->
             <nav class="black">
                 <span>Refugee Pal</span>
+                <a href="landing.html">&nbsp;&nbsp;Log Out&nbsp;&nbsp;</a>
+                <a href="about us.html">&nbsp;&nbsp;Inspiration&nbsp;&nbsp;</a>
                 <a href="guides.html">&nbsp;&nbsp;Guides&nbsp;&nbsp;</a>
                 <a href="physical-resources.html">&nbsp;&nbsp;Find&nbsp;&nbsp;</a>
                 <a href="homepage.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
@@ -28,6 +74,7 @@
                 </form>
               </div>
               
+            
               
               <div class="mainContainer">
                 <a href="#" class="mainLeftLink">Category 1</a>
@@ -39,8 +86,19 @@
                 <a href="#" class="mainLeftLink">Category 6</a>
                 <a href="#" class="mainRightLink">Event 2</a> -->
             </div>
+                
+            <ul class="categories">
+                <li><a href="#">Learn English</a></li>
+                <li><a href="#">Get settled</a></li>
+                <li><a href="#">Find Work</a></li>
+            </ul>
+            <ul class="homeList right eventBar">
+                <li class="right eventBar"><a href="#">Event 1</a></li>
+                <li class="right eventBar"><a href="#">Event 2</a></li>
+            </ul>
         </main>
         <footer>
+            <hr><p class="foot">&lt;&lt;&lt;&COPY; Antony Zhang and Ali Soufi, 2023 &gt;&gt;&gt;</p>
         </footer>
     </body>
 </html>
