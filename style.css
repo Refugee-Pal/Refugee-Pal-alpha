@@ -111,7 +111,7 @@ div a {
     background-color: inherit;
 }
 
-div a:hover, td a.card:hover {
+
 li:hover, td a.card:hover {
     background-color: grey;
 }
