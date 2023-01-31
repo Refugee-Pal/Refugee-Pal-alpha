@@ -53,9 +53,9 @@ float:left;
 }
 
 #search-container {
-    position: absolute;
-    left: 50vw;
-    bottom: 300px;
+    position:absolute;
+    bottom: 50vh;
+    left: 37%;
     display: flex;
     align-items: center;
     justify-content: center;
