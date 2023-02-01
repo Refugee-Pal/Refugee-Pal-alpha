@@ -11,21 +11,21 @@
 
     <body>
         <header>
-            <nav class="black">
-                <span>Refugee Pal</span>
-                <a href="guides.html">&nbsp;&nbsp;Guides&nbsp;&nbsp;</a>
-                <a href="find.html">&nbsp;&nbsp;Find&nbsp;&nbsp;</a>
-                <a href="index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
-            </nav>
+            <div class="topnav">
+                <span class="topheader"><b>Refugee Pal</b></span>
+                <a href="guides.html"><b>Guides</b></a>
+                <a href="find.html"><b>Find</b></a>
+                <a href="doctors.html"><b>Connect with a Professional</b></a>
+                <a href="index.html"><b>Home</b></a>
+              </div>
         </header>
         <main>
-            <h2 class="invisible">placeholder</h2>
             <table>
             <tr>
                 <td class="lcard" id="demo">
-                    <img class="guide" src="images/grass.jfif" alt="grass">
-                    <h2 class="audioHeader guide">Touching Grass</h2>
-                    <p class="guide">In this guide, Antony explains what <br> grass is, what touching it means <br>and how you can touch it.</p>
+                    <img class="guide" src="images/audioicon.png" alt="Audio">
+                    <h2 class="audioHeader guide">Audio Guides</h2>
+                    <p class="guide">Discover a new way to navigate the resettlement process with our audio guides, specially crafted for refugees. Find the support you need with practical and informative guides covering topics such as employment, English classes, and more. Empower yourself with the knowledge and resources to succeed in your new home. Start listening now.</p>
                     <audio class="guide" src="guides/audioTest.mp3" controls></audio>
                     <details>
                         <summary><strong>Transcription</strong></summary>
@@ -80,7 +80,7 @@
     </body>
     <script>
         function myFunction() {
-        document.getElementById("demo").innerHTML = '<img class="guide" src="images/grass.jfif" alt="grass"><h2 class="audioHeader guide">Grass</h2><p class="guide">In this guide, Antony explains what <br> grass is, what touching it means <br>and how you can touch it.</p><audio class="guide" src="guides/audioTest.mp3" controls></audio><details><summary><strong>Transcription</strong></summary><p class="guide test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet.</p></details>';
+        document.getElementById("demo").innerHTML = '<img class="guide" src="images/audioicon.png" alt="Applying for a work Permit"><h2 class="audioHeader guide">Applying for a work permit</h2><p class="guide">In this guide, the narrator provides a brief explanation of what a work permit is, how to apply for one, and other important details like how long it may take. </p><audio class="guide" src="guides/audioTest.mp3" controls></audio><details><summary><strong>Transcription</strong></summary><p class="guide test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet.</p></details>';
         }
     </script>
 </html>
