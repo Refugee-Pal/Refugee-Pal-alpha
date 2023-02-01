@@ -76,26 +76,52 @@ float:left;
 
 .mainLeftLink, .mainRightLink {
     text-align:center;
-    display: grid;
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
     background-color:black;
+    text-decoration: none;
     color: #fff;
 }
 
-.mainLeftLink {
+.mainLeftLink.one{
     grid-row-start: 1;
     grid-row-end: 4;
 }
 
-.mainRightLink {
+.mainRightLink.one {
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.mainLeftLink.two {
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+
+.mainRightLink.two {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.mainLeftLink.three {
+    grid-row-start: 7;
+    grid-row-end: 10;
+}
+
+.mainRightLink.three {
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.mainRightLink.four {
+    grid-row-start: 7;
+    grid-row-end: 9;
 }
 .mainContainer {
     display: grid;
     grid-auto-rows: minmax(5vw, auto);
     max-height: 100%;
     background-color: black;
-    gap: 10px;
 }
 
 
@@ -152,19 +178,11 @@ a.card {
     text-align: center;
     background-color:black;
 }
-.homeList {
-    display: inline;
-    border-radius: 5px;
-}
 
 .initial {
     padding-top: 5vh;
 }
 
-.eventBar {
-    width: 21vw;
-    height: 10vw;
-}
 .employment, .mosques, summary.guide {
     background-color:rgb(28, 29, 28);
     font-weight: 500;
