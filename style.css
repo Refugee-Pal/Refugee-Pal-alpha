@@ -46,6 +46,7 @@ color: white;
 text-decoration: none;
 font-weight:500;
 font-size: 1.2rem;
+padding: 0.2rem;
 float: right;
 }
 
@@ -53,9 +54,8 @@ img {
 max-width: 100%;
 }
 
-/* .black span {
+.black span {
 text-align: left;
-font-size: 1.5rem;
 float:left;
 }
 
@@ -68,17 +68,16 @@ float:left;
     color:rgb(0, 0, 0);
     text-decoration: none;
     background-color: #fff;
-    } */
+    }
 
 .foot {
     font-size: 0.85rem;
     font-family: monospace;
 }
-
-/* .black{
+ .black{
     background-color: black;
     padding-top: 0.1rem;
-} */
+} 
 
 .mainLeftLink, .mainRightLink {
     text-align:center;
@@ -137,7 +136,9 @@ float:left;
     background-color: rgb(113, 173, 197)
 }
 
-
+div.topnav a {
+    background-color: black;
+}
 
 .audio {
     margin:2rem;
@@ -152,6 +153,59 @@ float:left;
 p.guide {
     font-size: 1rem;
 }
+
+.container {
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+
+  .search {
+    bottom: 50vh;
+    left: 35vw;
+    right: 35vw;
+  }
+
+  .connect {
+    bottom: 0vh;
+    left: 33vw;
+    right: 33vw;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  form.block {
+    display: inline-block;
+    padding: 1.25rem;
+  }
+
+  input[type="text"] {
+    width: 65%;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  button[type="submit"] {
+    background-color: #2c2d2c;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 500;
+    border: 1px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+  }
 
 form h2 {
     font-size: 1.5rem;
@@ -171,7 +225,6 @@ summary.guide, div.guide {
 } 
 
 td.lcard {
-    border-right: 1px solid;
     vertical-align: top;
     display: flexbox;
     padding-left: 1.5rem;
@@ -241,34 +294,8 @@ fill: black;
     color: white;
 }
 
-.topnav a {
-    float: right;
-    color: whitesmoke;
-    background-color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none; 
-    font-size: 25px; }
-    
-.topnav a:hover {
-    background-color: rgb(113, 173, 197);
-    color: rgb(255, 255, 255);
-    transition-duration: 1s;
-    margin: 15px;
-    border-radius: 5px;
-}
 
 header {
     z-index: 9999;
     background-color: black;
-}
-
-.topheader {
-    float: left;
-    color: whitesmoke;
-    background-color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none; 
-    font-size: 25px; 
 }
