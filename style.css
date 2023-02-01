@@ -99,16 +99,8 @@ float:left;
 }
 
 
-li:hover, td a.card:hover {
+.mainLeftLink:hover, .mainRightLink:hover, td a.card:hover {
     background-color: grey;
-}
-
-.right {
-    float: right;
-}
-
-.left {
-    float: left;
 }
 
 .audio {
