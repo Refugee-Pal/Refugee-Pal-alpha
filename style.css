@@ -27,12 +27,6 @@ line-height: 1.35;
 width: 100ch;
 }
 
-/*nav {
-outline: 1px solid;
-outline-offset: 0.5rem;
-margin: 1.5rem 0rem;
-}*/
-
 .black {
 position:fixed;
 padding: 0.1rem;
@@ -75,8 +69,6 @@ float:left;
     font-family: monospace;
 }
 
-
-
 .black{
     background-color: black;
     padding-top: 0.1rem;
@@ -86,6 +78,7 @@ float:left;
     text-align:center;
     display: grid;
     background-color:black;
+    color: #fff;
 }
 
 .mainLeftLink {
@@ -103,12 +96,6 @@ float:left;
     max-height: 100%;
     background-color: black;
     gap: 10px;
-}
-    
-    
-
-div a {
-    background-color: inherit;
 }
 
 
