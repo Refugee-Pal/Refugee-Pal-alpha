@@ -8,40 +8,57 @@
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
         <style>
-                #search-container {
+                .container {
                   display: flex;
                   position: absolute;
-                  bottom: 50vh;
-                  left: 37vw;
-                  right: 37vw;
                   align-items: center;
+                }
+
+                .search {
+                  bottom: 50vh;
+                  left: 35vw;
+                  right: 35vw;
+                }
+
+                .connect {
+                  bottom: 0vh;
+                  left: 33vw;
+                  right: 33vw;
                 }
 
                 form {
                   display: flex;
                   align-items: center;
                   background-color: #f2f2f2;
-                  padding: 10px;
-                  border-radius: 5px;
+                  padding: 0.7rem;
+                  border-radius: 0.5rem;
                   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                }
+
+                form.block {
+                  display: inline-block;
+                  padding: 1.25rem;
                 }
               
                 input[type="text"] {
-                  width: 60%;
+                  width: 65%;
                   padding: 10px;
                   border: none;
                   font-size: 18px;
                   margin-right: 10px;
+                  text-align: center;
                 }
               
                 button[type="submit"] {
-                  width: 40%;
-                  padding: 10px;
                   background-color: #2c2d2c;
                   color: #fff;
-                  border: none;
-                  font-size: 18px;
+                  padding-left: 1rem;
+                  padding-right: 1rem;
+                  font-weight: 500;
+                  border: 1px;
+                  border-radius: 0.5rem;
                   cursor: pointer;
+                  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
                 }
 
                 </style>
@@ -59,18 +76,37 @@
         <main>
             <h2>placeholder</h2>
             <img src="images/refugeepalbanner.png" alt="main banner">
-            <div id="search-container">
+            <div class="container search">
                 <form action="#">
                   <input type="text" placeholder="Search...">
-                  <button type="submit">Go to Map</button>
+                 <a href="find.html" id="homeMapLink">Go to Map</a>
                 </form>
             </div>
             <img src="images/healthcare.png" alt="find a professional banner">
-              
+            <div class="container connect">
+              <form action="#" class ="block">
+                <h2>Connect with a Professional</h2><br>
+                <label for="lang">Language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select id="lang">
+                  <option value="No preference">No preference</option>
+                  <option value="Arabic">Arabic</option>
+                  <option value="Pashto">Pashto</option>
+                  <option value="Dari">Dari</option>
+                  <option value="Farsi">Farsi</option>
+                  <option value="Ukrainian">Ukrainian</option>
+                </select><br>
+                <label for="type">I want to see a&nbsp;</label>
+                <select id="type">
+                  <option value="Doctor">Doctor/Physician</option>
+                  <option value="Arabic">Lawyer</option>
+                  <option value="Pashto">Therapist</option>
+                </select><br>
+                <button type="submit">Go</button>
+            </div>
             
               
             <div class="mainContainer">
-              <a href="#" class="mainLeftLink one">Category 1</a>
+              <a href="#" class="mainLeftLink one"><img src="images/employment.png" alt="employment icon"></a>
               <a href="#" class="mainLeftLink one">Category 2</a>
               <a href="#" class="mainLeftLink one">Category 3</a>
               <a href="#" class="mainRightLink one">Event 1</a>

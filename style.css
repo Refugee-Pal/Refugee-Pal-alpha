@@ -76,15 +76,13 @@ float:left;
 
 .mainLeftLink, .mainRightLink {
     text-align:center;
-    border-bottom: 15px solid white;
-    border-left: 15px solid white;
+    border: 10px solid white;
+    border-radius: 1rem;
     background-color:black;
     text-decoration: none;
     color: #fff;
 }
-.mainRightLink {
-    border-left: 40px solid white;
-}
+
 .mainLeftLink.one{
     grid-row-start: 1;
     grid-row-end: 4;
@@ -123,12 +121,15 @@ float:left;
     display: grid;
     grid-auto-rows: minmax(6vw, auto);
     grid-template-columns: 1fr 1fr 1fr 1.3fr;
+    border: 20px solid white;
 }
 
 
 .mainLeftLink:hover, .mainRightLink:hover, td a.card:hover {
     background-color: grey;
 }
+
+
 
 .audio {
     margin:2rem;
@@ -142,6 +143,16 @@ float:left;
 
 p.guide {
     font-size: 1rem;
+}
+
+form h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+label, select {
+    font-size: 1.1rem;
 }
 
 summary.guide, div.guide {
@@ -159,7 +170,7 @@ td.lcard {
     padding-right: 1rem;
 }
 
-td a.card, li a {
+td a.card, #homeMapLink {
     color: white;
     text-decoration: none;
     font-size: 1rem;
@@ -185,7 +196,7 @@ a.card {
 }
 
 .employment, .mosques, summary.guide {
-    background-color:rgb(28, 29, 28);
+    background-color:rgb(0, 0, 0);
     font-weight: 500;
     color: white;
     padding-top: 0.15em;
@@ -196,10 +207,6 @@ a.card {
 
 }
 
-.mosques:hover, .employment:hover, summary.guide:hover {
-    background-color: grey;
-    color: white;
-}
 .invisible {
     color:white;
     font-size: 2rem;
@@ -209,4 +216,16 @@ a.card {
 border-radius: 5px;
 text-align: center;
 fill: black;
+}
+
+#homeMapLink {
+    background-color: black;
+    padding: 0.4rem;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+}
+
+.mosques:hover, .employment:hover, summary.guide:hover, #homeMapLink:hover {
+    background-color: grey;
+    color: white;
 }
