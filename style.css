@@ -291,7 +291,7 @@ a.card {
     padding-top: 5vh;
 }
 
-.employment, .mosques, summary.guide {
+summary.guide {
     background-color:rgb(0, 0, 0);
     font-weight: 500;
     color: white;
@@ -321,7 +321,7 @@ fill: black;
     border-radius: 0.5rem;
 }
 
-.mosques:hover, .employment:hover, summary.guide:hover, #homeMapLink:hover, button:hover {
+summary.guide:hover, #homeMapLink:hover, button:hover {
     background-color: grey;
     transition-duration: 500ms;
     color: white;
