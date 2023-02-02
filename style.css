@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 body {
@@ -87,6 +87,19 @@ float:left;
     text-decoration: none;
     color: #fff;
     transition-duration: 500ms;
+}
+
+.mainLeftLink {
+    background-position: center;
+    background-size: cover;
+}
+
+#employment {
+    background-image: url(images/employment.png);
+}
+
+#english {
+    background-image: url(images/english.jpg);
 }
 
 .mainLeftLink.one{
