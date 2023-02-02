@@ -82,12 +82,20 @@ float:left;
 
 .mainLeftLink, .mainRightLink {
     text-align:center;
-    border: 10px solid white;
     border-radius: 1rem;
+    border-left: 10px solid whitesmoke;
+    border-right: 10px solid whitesmoke;
+    border-top: 10px solid whitesmoke;
+    border-bottom: 10px solid whitesmoke;
     background-color:black;
     text-decoration: none;
     color: #fff;
     transition-duration: 500ms;
+}
+
+.mainRightLink {
+    border-top: 3px solid whitesmoke;
+    border-bottom: 3px solid whitesmoke;
 }
 
 .mainLeftLink {
@@ -114,6 +122,10 @@ float:left;
 
 #socialServices {
     background-image: url(images/socialService.jpg);
+}
+
+#programs {
+    background-image: url(images/people.png);
 }
 
 .mainLeftLink.one{
@@ -154,7 +166,7 @@ float:left;
     display: grid;
     grid-auto-rows: minmax(6vw, auto);
     grid-template-columns: 1fr 1fr 1fr 1.3fr;
-    border: 20px solid white;
+    border: 20px solid whitesmoke;
 }
 
 
