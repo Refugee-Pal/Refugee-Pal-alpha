@@ -73,6 +73,7 @@ float:left;
 .foot {
     font-size: 0.85rem;
     font-family: monospace;
+    padding: 1rem;
 }
  .black{
     background-color: black;
@@ -92,6 +93,7 @@ float:left;
 .mainLeftLink {
     background-position: center;
     background-size: cover;
+    font-weight: 500;
 }
 
 #employment {
@@ -100,6 +102,18 @@ float:left;
 
 #english {
     background-image: url(images/english.jpg);
+}
+
+#food {
+    background-image: url(images/food.jpg);
+}
+
+#worship {
+    background-image: url(images/mosque.jpg);
+}
+
+#socialServices {
+    background-image: url(images/socialService.jpg);
 }
 
 .mainLeftLink.one{
@@ -146,7 +160,8 @@ float:left;
 
 .mainLeftLink:hover, .mainRightLink:hover, td a.card:hover {
     transition-duration: 500ms;
-    background-color: rgb(113, 173, 197)
+    opacity: 0.5;
+    /* background-color: rgb(113, 173, 197) */
 }
 
 div.topnav a {
