@@ -8,46 +8,63 @@
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
     </head>
-
+    <style>
+        main {
+          background-color:whitesmoke;
+        }
+    </style>
     <body>
         <header>
-          <title>Refugee Pal</title>
-        </head>
-        <body>
         
-        <div class="topnav">
-          <span class="topheader"><b>Refugee Pal</b></span>
-          <a href="guides.html"><b>Guides</b></a>
-          <a href="find.html"><b>Find</b></a>
-          <a href="doctors.html"><b>Connect with a Professional</b></a>
-          <a href="index.html"><b>Home</b></a>
-        </div>
+        <nav class="black">
+            <span>Refugee Pal</span>
+            <a href="guides.html">&nbsp;&nbsp;Guides&nbsp;&nbsp;</a>
+            <a href="find.html">&nbsp;&nbsp;Find&nbsp;&nbsp;</a>
+            <a href="index.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
+            <a href="doctors.html">&nbsp;&nbsp;Connect with a Professional&nbsp;&nbsp;</a>
+        </nav> 
         </header>
         <main>
-            <img src="images/refugeepalbanner.png">
-            <div id="search-container">
+            <img src="images/refugeepalbanner.png" alt="main banner">
+            <div class="container search">
                 <form action="#">
                   <input type="text" placeholder="Search...">
-                  <button type="submit">Go</button>
+                 <a href="find.html" id="homeMapLink">Go to Map</a>
                 </form>
-              </div>
-              
+            </div>
+            <img src="images/healthcare.png" alt="find a professional banner">
+            <div class="container connect">
+              <form action="#" class ="block">
+                <h2>Connect with a Professional</h2><br>
+                <label for="lang">Language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select id="lang">
+                  <option value="No preference">No preference</option>
+                  <option value="Arabic">Arabic</option>
+                  <option value="Pashto">Pashto</option>
+                  <option value="Dari">Dari</option>
+                  <option value="Farsi">Farsi</option>
+                  <option value="Ukrainian">Ukrainian</option>
+                </select><br>
+                <label for="type">I want to see a&nbsp;</label>
+                <select id="type">
+                  <option value="Doctor">Doctor/Physician</option>
+                  <option value="Arabic">Lawyer</option>
+                  <option value="Pashto">Therapist</option>
+                </select><br>
+                <button type="submit">Go</button>
+            </div>
             
-              
-              <div class="mainContainer">
-                <a href="#" class="mainLeftLink one">Category 1</a>
-                <a href="#" class="mainLeftLink one">Category 2</a>
-                <a href="#" class="mainLeftLink one">Category 3</a>
-                <a href="#" class="mainRightLink one">Event 1</a>
-                <a href="#" class="mainLeftLink two">Catgeory 4</a>
-                <a href="#" class="mainLeftLink two">Category 5</a>
-                <a href="#" class="mainLeftLink two">Category 6</a>
-                <a href="#" class="mainRightLink two">Event 2</a>
-                <a href="#" class="mainLeftLink three">Catgeory 7</a>
-                <a href="#" class="mainLeftLink three">Category 8</a>
-                <a href="#" class="mainLeftLink three">Category 9</a>
-                <a href="#" class="mainRightLink three">Event 3</a>
-                <a href="#" class="mainRightLink four">Event 4</a>
+            <div></div>
+            <div class="mainContainer">
+              <a href="#" class="mainLeftLink one" id="employment">Employment</a>
+              <a href="#" class="mainLeftLink one" id="english">Learn English</a>
+              <a href="#" class="mainLeftLink one" id="food">Food</a>
+              <a href="#" class="mainRightLink one">Event 1</a>
+              <a href="#" class="mainLeftLink two" id="worship">Worship</a>
+              <a href="#" class="mainLeftLink two" id="socialServices">Settlement</a>
+              <a href="#" class="mainLeftLink two" id="programs">Events & Programs</a>
+              <a href="#" class="mainRightLink two">Event 2</a>
+              <a href="#" class="mainRightLink three">Event 3</a>
             </div>
               
         </main>
