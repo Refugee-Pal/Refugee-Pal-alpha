@@ -30,7 +30,6 @@ padding: 0.1rem;
 margin-bottom: 5rem;
 width:100%;
 display:inline;
-z-index: 9999;
 }
 .black a, .black span {
 color: white;
@@ -44,6 +43,15 @@ float: right;
 img {
 max-width: 100%;
 margin: 0;
+}
+
+#sp {
+    position: absolute;
+    top: 2.5rem;
+}
+header {
+    position: relative;
+    top: 0rem;
 }
 
 .black span {
@@ -72,22 +80,35 @@ float:left;
     padding-top: 0.1rem;
 } 
 
-.mainLeftLink, .mainRightLink {
+a {
+    transition-duration: 500ms;
+}
+
+.mainLeftLink, .mainRightLink{
     text-align:center;
     border-radius: 1rem;
+    background-color:black;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.mainLeftLink, .mainRightLink {
     border-left: 10px solid whitesmoke;
     border-right: 10px solid whitesmoke;
     border-top: 10px solid whitesmoke;
     border-bottom: 10px solid whitesmoke;
-    background-color:black;
-    text-decoration: none;
-    color: #fff;
-    transition-duration: 500ms;
 }
 
 .mainRightLink {
     border-top: 3px solid whitesmoke;
     border-bottom: 3px solid whitesmoke;
+}
+
+.map {
+    border: 0.2rem black solid;
+    background-color: whitesmoke;
 }
 
 .mainLeftLink {
@@ -161,11 +182,79 @@ float:left;
     border: 20px solid whitesmoke;
 }
 
+.mapContainer {
+    display: grid;
+    grid-auto-rows: 10vh;
+    grid-auto-columns: 2.675vw;
+    border: 0.75rem solid whitesmoke;
+    max-height: 90vh;
+    overflow-y: scroll;
+}
 
-.mainLeftLink:hover, .mainRightLink:hover, td a.card:hover {
+
+#image {
+    grid-row: 1/4;
+    grid-column: 1/16;
+    border-top: 0.4rem black solid;
+    border-left: 0.4rem black solid;
+    border-right: 0.4rem black solid;
+}
+
+#name {
+    grid-row: 4/5;
+    grid-column: 1/16;
+    border-left: 0.4rem black solid;
+    border-right: 0.4rem black solid;
+}
+
+#website {
+    grid-row: 5/7;
+    grid-column: 1/6;
+    border-left: 0.4rem black solid;
+}
+
+#phone {
+    grid-row: 5/7;
+    grid-column: 6/11;
+}
+
+#directions {
+    grid-row: 5/7;
+    grid-column: 11/16;
+    border-right: 0.4rem black solid;
+}
+
+#hours {
+    grid-row: 7/12;
+    grid-column: 1/7;
+    border-left: 0.4rem black solid;
+}
+
+#description {
+    grid-row: 7/12;
+    grid-column: 7/16;
+    border-right: 0.4rem black solid;
+}
+
+#events {
+    grid-row: 12/20;
+    grid-column: 1/16;
+    border-left: 0.4rem black solid;
+    border-right: 0.4rem black solid;
+    border-bottom: 0.4rem black solid;
+}
+
+#embed {
+    grid-row: 1/20;
+    grid-column: 16/37;
+    border: 0.5rem solid rgb(0, 0, 0);
+    border-radius: 0rem;
+}
+
+
+.mainLeftLink:hover, .mainRightLink:hover, td a.card:hover, .map:hover {
     transition-duration: 500ms;
     opacity: 0.5;
-    /* background-color: rgb(113, 173, 197) */
 }
 
 div.topnav a {
@@ -284,7 +373,7 @@ a.card {
     height: 13vw;
     text-align: center;
     background-color:black;
-    margin:10px
+    margin:10px;
 }
 
 .initial {
@@ -309,9 +398,9 @@ summary.guide {
 }
 
 .categories {
-border-radius: 10px;
-text-align: center;
-fill: black;
+    border-radius: 10px;
+    text-align: center;
+    fill: black;
 }
 
 #homeMapLink {
@@ -332,3 +421,4 @@ header {
     z-index: 9999;
     background-color: black;
 }
+
