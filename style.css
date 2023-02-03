@@ -24,61 +24,10 @@ line-height: 1.35;
 width: 100ch;
 }
 
-.black {
-position:fixed;
-padding: 0.1rem;
-margin-bottom: 5rem;
-width:100%;
-display:inline;
-}
-.black a, .black span {
-color: white;
-text-decoration: none;
-font-weight:500;
-font-size: 1.2rem;
-padding: 0.2rem;
-float: right;
-}
-
 img {
 max-width: 100%;
 margin: 0;
 }
-
-#sp {
-    position: absolute;
-    top: 2.5rem;
-}
-header {
-    position: relative;
-    top: 0rem;
-}
-
-.black span {
-text-align: left;
-float:left;
-}
-
-.black a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-.black a:hover {
-    color:rgb(0, 0, 0);
-    text-decoration: none;
-    background-color: #fff;
-    }
-
-.foot {
-    font-size: 0.85rem;
-    font-family: monospace;
-    padding: 0.5rem;
-}
- .black{
-    background-color: black;
-    padding-top: 0.1rem;
-} 
 
 a {
     transition-duration: 500ms;
