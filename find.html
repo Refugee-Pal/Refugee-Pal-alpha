@@ -8,6 +8,24 @@
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
+        <script>
+            let isOn = false;
+  
+            function toggle() {
+                const toggleOff = document.querySelector(".toggle-off");
+                const toggleOn = document.querySelector(".toggle-on");
+            
+                if (!isOn) {
+                toggleOff.style.backgroundColor = "gray";
+                toggleOn.style.backgroundColor = "green";
+                isOn = true;
+                } else {
+                toggleOff.style.backgroundColor = "green";
+                toggleOn.style.backgroundColor = "gray";
+                isOn = false;
+                }
+            }
+          </script>
     </head>
     
     <body>
@@ -28,18 +46,59 @@
             <div class="mapContainer">
                 <div class="mapContainerLeft">
                     <div class="map addLeft addRight" id="image"></div>
-                    <div class="map addLeft addRight" id="name">Muslim Food Bank and Community Services</div>
-                    <div class="map addLeft" id="website"></div>
-                    <div class="map addRight" id="directions"></div>
-                    <div class="map" id="phone"></div>
-                    <div class="map addLeft" id="hours"></div>
-                    <div class="map addRight" id="description"></div>
+                    <div class="map addLeft addRight" id="name">Muslim Food Bank and Community Services<br><span id="address">12941 115 Ave #104, Surrey, BC V320E2</span></div>
+                    <div class="map addLeft" id="website"><a href="https://muslimfoodbank.com"><i class="fa-solid fa-link"></i><br><b>Link</b></a></div>
+                    <div class="map addRight" id="directions"><a href="https://www.google.com/maps/dir//muslim+food+bank+and+community+services+surrey"><i class="fa-solid fa-compass"></i><br><b>Directions</b></a></div>
+                    <div class="map" id="phone"><a href="tel:+18662483868"><i class="fa-solid fa-phone"></i><br><b>Phone</b></a></div>
+                    <div class="map addLeft" id="hours">
+                        <table>
+                            <caption>Hours</caption>
+                            <tr>
+                                <td>Mon.&nbsp;</td>
+                                <td><time>9AM</time>-<time>1PM</time></td>
+                            </tr>
+                            <tr>
+                                <td>Tues.&nbsp;</td>
+                                <td><time>9AM</time>-<time>1PM</time></td>
+                            </tr>
+                            <tr>
+                                <td>Wed.&nbsp;</td>
+                                <td><time>9AM</time>-<time>1PM</time></td>
+                            </tr>
+                            <tr>
+                                <td>Thurs.&nbsp;&nbsp;</td>
+                                <td><time>9AM</time>-<time>1PM</time></td>
+                            </tr>
+                            <tr>
+                                <td>Fri.&nbsp;</td>
+                                <td style="color: red;">Closed</td>
+                            </tr>
+                            <tr>
+                                <td>Sat.&nbsp;</td>
+                                <td><time>10AM</time>-<time>1PM</time></td>
+                            </tr>
+                            <tr>
+                                <td>Sun.&nbsp;</td>
+                                <td style="color: red;">Closed</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="map addRight" id="description">
+                        <span>Description</span>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam aliquam odio placeat nisi obcaecati voluptatibus laboriosam modi recusandae consequatur voluptatem dolorem delectus perferendis provident maiores exercitationem, tenetur eveniet neque.</div>
+                    </div>
                     <div class="map addRight addLeft addBottom" id="events"></div>
                 </div>
                 <div class="mapContainerRight">
-                    <div class="map addLeft" id="toggle"></div>
-                    <div class="map addRight" id="category"></div>
-                    <div class="map addLeft addRight addBottom" id="embed"></div>
+                    <div class="map addLeft" id="toggle">
+                        <div class="toggle-container" onclick="toggle()">
+                            <div class="toggle-half toggle-off">Map</div>
+                            <div class="toggle-half toggle-on">List</div>
+                        </div>
+                    </div>
+                    <div class="map" id="category">Food &#9660;</div>
+                    <div class="map" id="more"><a href="#">More on this Topic</a></div>
+                    <div class="map addLeft" id="embed"></div>
                 </div>
         </main>
     </body>
