@@ -276,7 +276,7 @@ a {
 
 .mainLeftLink:hover, .mainRightLink:hover, td a.card:hover{
     transition-duration: 500ms;
-    opacity: 0.5;
+    opacity: .8;
 }
 
 div.topnav a {
@@ -401,9 +401,8 @@ a.card {
     padding: 10px;
     width: 13vw;
     height: 13vw;
-    text-align: center;
     background-color:black;
-    margin:10px;
+    margin:20px;
 }
 
 .initial {
@@ -414,11 +413,12 @@ summary.guide {
     background-color:rgb(0, 0, 0);
     font-weight: 500;
     color: white;
-    padding-top: 0.15em;
-    padding-bottom: 0.15em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     border: 1px solid;
-    margin: 0.2rem 0rem;
+    margin: 0.2rem 0.2rem;
     border-radius: 10px;
+    height: 75px;
 
 }
 
@@ -440,12 +440,12 @@ summary.guide {
     border-radius: 0.5rem;
 }
 
-summary.guide:hover, #homeMapLink:hover, button:hover {
-    background-color: grey;
+summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover {
+    background-color: rgb(36, 36, 36);
     transition-duration: 500ms;
     color: white;
+    cursor: pointer;
 }
-
 
 header {
     z-index: 9999;
@@ -460,7 +460,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 75px;
     background-color: black;
     padding: 0 20px;
   }
@@ -470,7 +470,7 @@ nav a {
     text-decoration: none;
     padding: 6px 25px;
     border: black solid;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
 nav a:hover {
@@ -521,3 +521,16 @@ nav a:hover {
   .toggle-container .toggle-on {
     background-color: green;
   }
+
+.usefulinks {
+    display:flex;
+    max-width: 200px;
+    background: black;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration:none;
+    
+}
+
