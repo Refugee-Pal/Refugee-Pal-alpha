@@ -378,7 +378,7 @@ summary.guide {
     border-radius: 0.5rem;
 }
 
-summary.guide:hover, #homeMapLink:hover, button:hover {
+summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover {
     background-color: rgb(36, 36, 36);
     transition-duration: 500ms;
     color: white;
@@ -398,7 +398,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 75px;
     background-color: black;
     padding: 0 20px;
   }
@@ -408,7 +408,7 @@ nav a {
     text-decoration: none;
     padding: 6px 25px;
     border: black solid;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
 nav a:hover {
@@ -431,3 +431,15 @@ nav a:hover {
 .content {
     margin-top: 60px;
   }
+
+.usefulinks {
+    display:flex;
+    max-width: 200px;
+    background: black;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration:none;
+    
+}
