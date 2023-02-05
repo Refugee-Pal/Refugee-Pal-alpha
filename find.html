@@ -8,9 +8,9 @@
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaDF1nGqgbl1XRXxMWYcHbmrx2CH-VRvs&callback=initMap" async defer></script>
         <script>
             let isOn = false;
-  
             function toggle() {
                 const toggleOff = document.querySelector(".toggle-off");
                 const toggleOn = document.querySelector(".toggle-on");
@@ -25,7 +25,15 @@
                 isOn = false;
                 }
             }
-          </script>
+
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('embed'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+                });
+            }
+        </script>
     </head>
     
     <body>
