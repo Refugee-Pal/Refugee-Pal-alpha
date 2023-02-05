@@ -309,16 +309,18 @@ p.guide{
     display: flex;
     position: absolute;
     align-items: center;
+    justify-content: center;
   }
 
   .search {
     bottom: 50vh;
     left: 35vw;
     right: 35vw;
+    justify-content: center;
   }
 
   .connect {
-    bottom: 0vh;
+    top: 100px;
     left: 33vw;
     right: 33vw;
   }
@@ -441,7 +443,7 @@ summary.guide {
 }
 
 summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover {
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(19, 19, 19);
     transition-duration: 500ms;
     color: white;
     cursor: pointer;
@@ -534,3 +536,37 @@ nav a:hover {
     
 }
 
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px;
+  }
+  
+  .card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 700px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .card-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card2:hover:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card-text {
+    width: 700px;
+    padding: 5px;
+    word-wrap: break-word;
+    margin: 0 auto;
+  }
