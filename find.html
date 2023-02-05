@@ -11,6 +11,8 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaDF1nGqgbl1XRXxMWYcHbmrx2CH-VRvs&callback=initMap" async defer></script>
         <script>
             let isOn = false;
+            let isDown = false;
+            let category = "All ";
             function toggle() {
                 const toggleOff = document.querySelector(".toggle-off");
                 const toggleOn = document.querySelector(".toggle-on");
@@ -26,12 +28,31 @@
                 }
             }
 
+            function filter() {
+                const dropDown = document.getElementById("category")
+                if (!isDown) {
+                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment \')">Employment</li><li onClick="changeCategory(\'Learn English \')">Learn English</li></ul>');
+                    isDown = true;
+                } else {
+                    dropDown.innerHTML = (category + '&#9660;');
+                    isDown = false;
+                }
+            }
+
             var map;
             function initMap() {
                 map = new google.maps.Map(document.getElementById('embed'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
+                center: {lat: 49.181, lng: -122.846},
+                zoom: 12,
+                minZoom: zoom - 3,
+                maxZoom: zoom + 3,
+                disableDefaultUI: true,
+                zoomControl: true,
                 });
+            }
+
+            function changeCategory(newCategory) {
+                category = newCategory;
             }
         </script>
     </head>
@@ -104,7 +125,7 @@
                             <div class="toggle-half toggle-on">List</div>
                         </div>
                     </div>
-                    <div class="map" id="category">Food &#9660;</div>
+                    <div class="map" id="category" onclick="filter()">All &#9660;</div>
                     <div class="map" id="more"><a href="#">More on this Topic</a></div>
                     <div class="map addLeft" id="embed"></div>
                 </div>

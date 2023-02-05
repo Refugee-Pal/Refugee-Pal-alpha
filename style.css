@@ -12,6 +12,28 @@
     font-size: 1.2rem;
 }
 
+
+#dropDown {
+    list-style-type: none;
+    position: absolute;
+    text-align: center;
+    background-color: gray;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
+    width: 18vw;
+    z-index: 99999999;
+    top: calc(10vh + 50px);
+}
+
+#dropDown li:hover {
+    background-color: black;
+    z-index: 99999999;
+}
+
+#dropDown li {
+    padding: 0.25rem 0;
+    background-color: inherit;
+    z-index: 99999999;
+}
 ::-webkit-scrollbar {
     width: 0.5rem;
     color:#2c2d2c;
@@ -203,6 +225,8 @@ a {
 #embed {
     grid-row: 3/19;
     grid-column: 1/22;
+    position: relative;
+    z-index: 1;
 }
 .mapContainer {
     display: grid;
@@ -246,6 +270,13 @@ a {
     grid-column: 11/16;
 }
 
+#website, #phone, #directions {
+    background-color: gainsboro;
+}
+
+#website:hover, #phone:hover, #directions:hover {
+    background-color: whitesmoke;
+}
 #hours {
     grid-row: 17/28;
     grid-column: 1/7;
