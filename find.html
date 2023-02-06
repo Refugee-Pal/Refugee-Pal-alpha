@@ -10,9 +10,53 @@
         <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaDF1nGqgbl1XRXxMWYcHbmrx2CH-VRvs&callback=initMap" async defer></script>
         <script>
+            let category = "All";
+            var map;
+            var i, newMarker;
+            var markers = [];
+            var locations = [
+                ['Mosaic Surrey Newcomers Centre', 49.132275300585775, -122.84446560491966, 'green', 'Learn English'],
+                ['WorkBC Guildford', 49.1901159521042, -122.79920270345202, 'orange', 'Employment']
+            ];
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('embed'), {
+                center: {lat: 49.181, lng: -122.846},
+                zoom: 12,
+                disableDefaultUI: true,
+                zoomControl: true,
+                restriction: {
+                    latLngBounds: {
+                    north: 49.5,
+                    south: 48.75,
+                    east: -121.5,
+                    west: -123.5,
+                    },
+                },
+                });
+                for (i = 0; i < locations.length; i++) {
+                    newMarker = new google.maps.Marker({
+                        position: {lat: locations[i][1], lng: locations[i][2]},
+                        map: map,
+                        title: locations[i][0],
+                        icon: 'https://maps.google.com/mapfiles/ms/icons/' + locations[i][3] + '-dot.png',
+                    });
+                    newMarker.category = locations[i][4];
+                    newMarker.setVisible(true);
+                    markers.push(newMarker);
+                }
+            }
+            function changeCategory(newCategory) {
+                category = newCategory;
+                for (var i = 0; i < markers.length; i++) {
+                    if (markers[i].category === newCategory || newCategory==="All") {
+                        markers[i].setVisible(true);
+                    } else {
+                        markers[i].setVisible(false);
+                    }
+                }
+            }
             let isOn = false;
             let isDown = false;
-            let category = "All ";
             function toggle() {
                 const toggleOff = document.querySelector(".toggle-off");
                 const toggleOn = document.querySelector(".toggle-on");
@@ -31,7 +75,7 @@
             function filter() {
                 const dropDown = document.getElementById("category")
                 if (!isDown) {
-                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment \')">Employment</li><li onClick="changeCategory(\'Learn English \')">Learn English</li></ul>');
+                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment</li><li onClick="changeCategory(\'Learn English\')">Learn English</li><li onClick="changeCategory(\'All\')">All</li></ul>');
                     isDown = true;
                 } else {
                     dropDown.innerHTML = (category + '&#9660;');
@@ -39,21 +83,9 @@
                 }
             }
 
-            var map;
-            function initMap() {
-                map = new google.maps.Map(document.getElementById('embed'), {
-                center: {lat: 49.181, lng: -122.846},
-                zoom: 12,
-                minZoom: zoom - 3,
-                maxZoom: zoom + 3,
-                disableDefaultUI: true,
-                zoomControl: true,
-                });
-            }
+            
+            
 
-            function changeCategory(newCategory) {
-                category = newCategory;
-            }
         </script>
     </head>
     
@@ -125,7 +157,7 @@
                             <div class="toggle-half toggle-on">List</div>
                         </div>
                     </div>
-                    <div class="map" id="category" onclick="filter()">All &#9660;</div>
+                    <div class="map" id="category" onclick="filter()">All&#9660;</div>
                     <div class="map" id="more"><a href="#">More on this Topic</a></div>
                     <div class="map addLeft" id="embed"></div>
                 </div>

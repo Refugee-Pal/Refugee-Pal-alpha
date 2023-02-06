@@ -1,0 +1,41 @@
+<head>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaDF1nGqgbl1XRXxMWYcHbmrx2CH-VRvs&callback=initMap" async defer></script>
+<script>
+            var map;
+            var locations = [
+                ['WorkBC Guildford', 49.132275300585775, -122.84446560491966, 'green', 'Learn English'],
+                ['Mosaic Surrey Newcomers Centre', 49.1901159521042, -122.79920270345202, 'orange', 'Employment']
+            ];
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('embed'), {
+                center: {lat: 49.181, lng: -122.846},
+                zoom: 12,
+                disableDefaultUI: true,
+                zoomControl: true,
+                restriction: {
+                    latLngBounds: {
+                    north: 49.5,
+                    south: 48.75,
+                    east: -121.5,
+                    west: -123.5,
+                    },
+                },
+                });
+            }
+</script>
+<style>
+    .top {
+        z-index: 9999;
+        display: flex;
+    }
+    #embed {
+        width:70%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+</style>
+</head>
+<div id="embed"></div>
+<div class="top">category + &#9650; <ul id="dropDown" class="top"><li onClick="changeCategory('Employment')">Employment</li><li onClick="changeCategory('Learn English')">Learn English</li></ul></div>
+
