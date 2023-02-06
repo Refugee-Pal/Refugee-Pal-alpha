@@ -519,14 +519,12 @@ nav a:hover {
 .left {
     display: flex;
     align-items: center;
-    z-index: 9999;
   }
 
 .right {
     display: flex;
     align-items: center;
     font-weight: 600;
-    z-index: 9999;
   }
 
 .content {
