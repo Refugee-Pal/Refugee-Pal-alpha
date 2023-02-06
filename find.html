@@ -46,7 +46,7 @@
                 }
             }
             function changeCategory(newCategory) {
-                category = newCategory;
+                category = newCategory + ' ';
                 for (var i = 0; i < markers.length; i++) {
                     if (markers[i].category === newCategory || newCategory==="All") {
                         markers[i].setVisible(true);
@@ -75,7 +75,7 @@
             function filter() {
                 const dropDown = document.getElementById("category")
                 if (!isDown) {
-                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment</li><li onClick="changeCategory(\'Learn English\')">Learn English</li><li onClick="changeCategory(\'All\')">All</li></ul>');
+                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'All\')">All </li></ul>');
                     isDown = true;
                 } else {
                     dropDown.innerHTML = (category + '&#9660;');
@@ -83,10 +83,12 @@
                 }
             }
 
-            
-            
-
         </script>
+        <style>
+            nav {
+                padding-right: 1.5rem;
+            }
+        </style>
     </head>
     
     <body>
@@ -157,7 +159,7 @@
                             <div class="toggle-half toggle-on">List</div>
                         </div>
                     </div>
-                    <div class="map" id="category" onclick="filter()">All&#9660;</div>
+                    <div class="map" id="category" onclick="filter()">All &#9660;</div>
                     <div class="map" id="more"><a href="#">More on this Topic</a></div>
                     <div class="map addLeft" id="embed"></div>
                 </div>
