@@ -497,6 +497,7 @@ nav {
     height: 50px;
     background-color: black;
     padding: 0 20px;
+    z-index: 9999;
   }
 
 nav a {
