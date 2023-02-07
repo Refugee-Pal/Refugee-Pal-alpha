@@ -12,6 +12,10 @@
     font-size: 1.2rem;
 }
 
+html, body {
+    height: 100%;
+}
+
 
 #dropDown {
     list-style-type: none;
@@ -477,8 +481,10 @@ summary.guide {
     border-radius: 0.5rem;
 }
 
-summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover {
-    background-color: rgb(36, 36, 36);
+
+summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover, .professionalinks:hover {
+    background-color: rgb(19, 19, 19);
+
     transition-duration: 500ms;
     color: white;
     cursor: pointer;
@@ -572,8 +578,28 @@ nav a:hover {
     
 }
 
+
 main {
     padding-top: 50px;
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 600px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card-header {
+    background-color: #f1f1f1;
+    padding: 10px;
 }
 
 #embedListContainer {
@@ -589,5 +615,40 @@ main {
     border-radius: 0.5rem;
     background-color: whitesmoke;
     box-shadow:rgb(0, 0, 0) 0.1rem 0.2rem;
+}
+
+
+.card-text {
+    width: 550px;
+    padding: 5px;
+    word-wrap: break-word;
+    margin: 0 auto;
+}
+iframe{
+    width: 100%;
+    border: 2px solid #ccc;
+}
+
+.featuredescription {
+    text-align: center;
+    max-width: 100%;  
+}
+
+.featureheader {
+    text-align: center;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+.professionalinks {
+    display: flex;
+    margin: 20px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    -webkit-text-fill-color: white;
+    border-radius: 5px;
+    text-align: center;
+    
 }
 
