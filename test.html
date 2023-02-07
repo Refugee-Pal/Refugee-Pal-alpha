@@ -1,0 +1,26 @@
+<body>
+    <head>
+        <style>
+            #embed {
+                height: 500px;
+                width: 1000px;
+            }
+        </style>
+    </head>
+
+    <main>
+                <div class="map addLeft" id="embed"></div>
+    </main>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaDF1nGqgbl1XRXxMWYcHbmrx2CH-VRvs&callback=initMap" async defer></script>
+        <script>
+            let map;
+            function initMap() {
+            map = new google.maps.Map(document.getElementById("embed"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+            });
+}
+
+        </script>
+</html>
