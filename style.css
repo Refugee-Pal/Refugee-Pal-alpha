@@ -165,7 +165,7 @@ a {
 
 .mapContainerLeft {
     display: grid;
-    grid-auto-rows: 5vh;
+    grid-auto-rows: 5.05vh;
     grid-auto-columns: 2.6vw;
     max-height: 91vh;
     max-width:fit-content;
@@ -222,11 +222,16 @@ a {
     grid-column: 15/22;
 }
 
-#embed {
+#mapDiv, #list {
     grid-row: 3/19;
     grid-column: 1/22;
     position: relative;
-    z-index: 1;
+    z-index: 999999;
+    background-color: whitesmoke;
+}
+
+#mapDiv {
+    z-index: 1000000;
 }
 .mapContainer {
     display: grid;
@@ -478,15 +483,10 @@ summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover {
     color: white;
     cursor: pointer;
 }
-
 header {
     z-index: 9999;
     background-color: black;
 }
-
-body {
-    margin: 0;
-  }
 
 nav {
     display: flex;
@@ -570,5 +570,24 @@ nav a:hover {
     border-radius: 10px;
     text-decoration:none;
     
+}
+
+main {
+    padding-top: 50px;
+}
+
+#embedListContainer {
+    z-index: 999999;
+    position: absolute;
+    color: black;
+    list-style-type: none;
+}
+
+.embedListItem {
+    margin: 0.75rem;
+    border: 0.2rem black solid;
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
+    box-shadow:rgb(0, 0, 0) 0.1rem 0.2rem;
 }
 
