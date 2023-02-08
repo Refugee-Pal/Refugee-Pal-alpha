@@ -581,6 +581,7 @@ nav a:hover {
 
 main {
     padding-top: 50px;
+}
 
 .cards-container {
     display: flex;
@@ -636,8 +637,8 @@ iframe{
 
 .featureheader {
     text-align: center;
-    padding: 30px;
-    margin-top: 10px;
+    padding-top: 50px;
+    margin-top: 20px;
 }
 
 .professionalinks {
