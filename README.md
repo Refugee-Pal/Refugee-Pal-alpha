@@ -3,7 +3,7 @@
 Our web application provides essential resources and support to refugees settling in British Columbia. With features like language accessibility, healthcare information, and a directory of useful locations, we aim to make the transition to their new home as smooth and stress-free as possible. By empowering refugees, we are building a brighter future for all.
 
 <p align="center">
-  <img src="images/oflogo.png" />
+  <img src="images/refugeepal-logo.png" />
 </p>
 
 ## Features:
