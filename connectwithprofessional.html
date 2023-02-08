@@ -10,30 +10,42 @@
     <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-
-    <nav>
-        <div class="left">
+  <header>
+    <nav id="navbar">
+                <div class="left">
             <h2 style="color: white; margin: 0;">Refugee Pal</h2>
         </div>
         <div class="right">
-            <a href="index.html"> <b>Home</b></a>
-            <a href="guides.html"><b>Guides</b></a>
-            <a href="connectwithprofessional.html"><b>Connect with Professionals</b></a>
-            <a href="find.html"><b>Find</b></a>
+            <a href="index.html"><i class="fa-solid fa-house" style="color: white; font-size: 30px; margin-left: 0;"></i> Home</a>
+            <a href="guides.html"><i class="fa-solid fa-file-audio" style="color: white; font-size: 30px; margin-left: 0;"></i> Guides</a>
+            <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group" style="color: white; font-size: 30px; margin-left: 0;" ></i> <b>Digital Resource Hub</b></a>
+            <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie" style="color: white; font-size: 30px; margin-left: 0;"></i> <b>Connect with Professionals</b></a>
+            <a href="find.html"><i class="fa-solid fa-map-location-dot" style="color: white; font-size: 30px; margin-left: 0;"></i> <b>Find</b></a>
         </div>
-    </nav>
+      </nav>
+      
+      <script>
+      const navbar = document.querySelector("#navbar");
+      const sticky = navbar.offsetTop;
+      
+      window.onscroll = function() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      };
+      </script>
 </header>
 
-<h1 class="featureheader">Connect with any professional you need as a Refugee</h1>
+<h1 class="featureheader">Connect with Professionals</h1>
 
 <i class="fa-solid fa-user-tie" style="display: flex; justify-content: center; padding: 10px;"></i>
 
-<p class="featuredescription">As a refugee in british columbia, it is important and necessary that you have the ability to connect and find any professional service you need. 
-   Whether it be a settlement worker, doctor, or psychologist. However, language barriers may prevent some individuals from seeking these services, and thats where Refugee Pal comes in. 
-   With the connect with professional feature you can navigate your way to a better life in British Columbia as a Refugee.</p>
+<p class="featuredescription">Connect with healthcare professionals effortlessly, with a directory of available professionals sorted by language and profession, breaking language barriers in healthcare.</p>
 
-
+<div class="professionalflex">
     <a class="professionalinks" href="doctors.html"><b><i class="fa-solid fa-user-doctor" style="font-size: 30px; padding-right: 10px;"></i>Healthcare</b></a>
 
     <a class="professionalinks" href="settlementworkers.html"><b><i class="fa-solid fa-house" style="font-size: 25px; padding-right: 7px;"></i>Settlement Workers</b></a>
+</div>

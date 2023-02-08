@@ -33,6 +33,9 @@ body {
 
 .button {
   text-decoration: none;
+  position: sticky;
+  top: 0;
+  overflow: visible;
   -webkit-text-fill-color: #4ca4bf;
   padding: 20px;
   margin: 10px;
@@ -56,6 +59,7 @@ body {
   width: 500px;
   height: 500px;
   
+  
 
 }
 
@@ -75,6 +79,7 @@ body {
   
 }
 
+
 .description:hover {
   transition-duration: 10s;
 }
@@ -83,11 +88,13 @@ body {
   </head>
   <body>
     <header>
-      <img class="logo" src="images/refugeepal-logo.png">      
-      <a href="https://refugee-pal.vercel.app/" class="button"><b><i class="fa-solid fa-house" style="padding: 5px; font-size: 20px;"></i> Go to Refugee Pal</b></a>
-      <a href="https://github.com/chubbiloo/Refugee-Pal" class="button"><b><i class="fa-brands fa-github"style="padding: 5px; font-size: 20px;"></i>Our Github</b></a>
-      <a href="https://refugee-pal.vercel.app/inspiration.html" class="button"><b><i class="fa-solid fa-lightbulb"style="padding: 5px; font-size: 20px;"></i>Inspiration and About the Creators</b></a>
-      <a href="https://refugee-pal.vercel.app/Judges.html" class="button"><b><i class="fa-solid fa-user-tie"style="padding: 5px; font-size: 20px;"></i>Logbook and more for Judges</b></a>
+      <img class="logo" src="images/refugeepal-logo.png">  
+      <div class="allbuttons"> 
+      <a href="https://refugee-pal.vercel.app/" class="button" target="_blank"><b><i class="fa-solid fa-house" style="padding: 5px; font-size: 20px;"></i> Go to Refugee Pal</b></a>
+      <a href="https://github.com/chubbiloo/Refugee-Pal" class="button" target="_blank"><b><i class="fa-brands fa-github"style="padding: 5px; font-size: 20px;"></i>Our Github</b></a>
+      <a href="https://refugee-pal.vercel.app/inspiration.html" class="button" target="_blank"><b><i class="fa-solid fa-lightbulb"style="padding: 5px; font-size: 20px;"></i>Inspiration and About the Creators</b></a>
+      <a href="https://refugee-pal.vercel.app/Judges.html" class="button" target="_blank"><b><i class="fa-solid fa-user-tie"style="padding: 5px; font-size: 20px;"></i>Logbook and more for Judges</b></a>
+      </div>   
       <h1 style="padding: 10px;"><strong>Empathize, Navigate, Sustain: Supporting refugees</strong></h1>
       <p><b>2023 Innovation fair: </b>by Ali Soufi and Antony Zhang </p>
     </header>

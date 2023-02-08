@@ -7,7 +7,7 @@
     <meta name="description" content="About the creators of Refugee Pal">
     <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b7f18fe09b.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -15,20 +15,33 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-
-    <nav>
-        <div class="left">
-            <h2 style="color: white; margin: 0;">Refugee Pal</h2>
-        </div>
-        <div class="right">
-            <a href="index.html"> <b>Home</b></a>
-            <a href="guides.html"><b>Guides</b></a>
-            <a href="doctors.html"><b>Connect with Professionals</b></a>
-            <a href="find.html"><b>Find</b></a>
-        </div>
-    </nav>
-</header>
+    <header>
+        <nav id="navbar">
+                    <div class="left">
+                <h2 style="color: white; margin: 0;">Refugee Pal</h2>
+            </div>
+            <div class="right">
+                <a href="index.html"><i class="fa-solid fa-house" style="color: white; font-size: 30px; margin-left: 0;"></i> Home</a>
+                <a href="guides.html"><i class="fa-solid fa-file-audio" style="color: white; font-size: 30px; margin-left: 0;"></i> Guides</a>
+                <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group" style="color: white; font-size: 30px; margin-left: 0;" ></i> Digital Resource Hub</a>
+                <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie" style="color: white; font-size: 30px; margin-left: 0;"></i>Connect with Professionals</a>
+                <a href="find.html"><i class="fa-solid fa-map-location-dot" style="color: white; font-size: 30px; margin-left: 0;"></i> Find</a>
+            </div>
+          </nav>
+          
+          <script>
+          const navbar = document.querySelector("#navbar");
+          const sticky = navbar.offsetTop;
+          
+          window.onscroll = function() {
+            if (window.pageYOffset >= sticky) {
+              navbar.classList.add("sticky");
+            } else {
+              navbar.classList.remove("sticky");
+            }
+          };
+          </script>
+    </header>
 
 <div class="container-fluid h-100">
     <div class="row h-100">
