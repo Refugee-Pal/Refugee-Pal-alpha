@@ -16,6 +16,9 @@ html, body {
     height: 100%;
 }
 
+body {
+    padding-top: 20px;
+}
 
 #dropDown {
     list-style-type: none;
@@ -489,21 +492,17 @@ summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover {
     color: white;
     cursor: pointer;
 }
-header {
-    z-index: 9999;
-    background-color: black;
-}
 
 nav {
     display: flex;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 75px;
     background-color: #4ca4bf;
-    padding: 0 20px;
-    z-index: 9999;
   }
 
 nav a {
@@ -511,11 +510,13 @@ nav a {
     background-color: #4ca4bf;
     text-decoration: none;
     padding: 6px 25px;
-    margin-right: 10px;
+    margin-right: 0px;
+    margin-left: 0;
     margin-top: 5px;
     border-radius: 10px;
     z-index: 9999;
     float: right;
+    
   }
 
 nav a:hover {
@@ -691,3 +692,14 @@ iframe{
     z-index: 10;
   }
 
+.doctorheader {
+    padding-top: 40px;
+}
+
+.refugeepalheader {
+    color: white;
+    font-size: 32px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+}
