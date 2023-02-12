@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta title="Connect with a Professional">
+    <meta name="author" content="Antony Zhang & Ali Soufi">
+    <meta name="description" content="About the creators of Refugee Pal">
+    <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+                    <div class="left">
+                <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
+            </div>
+            <div class="right">
+                <a href="index.html"><i class="fa-solid fa-house" style="color: white; font-size: 30px; margin-left: 0;"></i> Home</a>
+                <a href="guides.html"><i class="fa-solid fa-file-audio" style="color: white; font-size: 30px; margin-left: 0;"></i> Guides</a>
+                <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group" style="color: white; font-size: 30px; margin-left: 0;" ></i> Digital Resource Hub</a>
+                <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie" style="color: white; font-size: 30px; margin-left: 0;"></i>Connect with Professionals</a>
+                <a href="find.html"><i class="fa-solid fa-map-location-dot" style="color: white; font-size: 30px; margin-left: 0;"></i> Find</a>
+            </div>
+          </nav>
+          
+          <script>
+          const navbar = document.querySelector("#navbar");
+          const sticky = navbar.offsetTop;
+          
+          window.onscroll = function() {
+            if (window.pageYOffset >= sticky) {
+              navbar.classList.add("sticky");
+            } else {
+              navbar.classList.remove("sticky");
+            }
+          };
+          </script>
+    </header>

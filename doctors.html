@@ -7,7 +7,7 @@
     <meta name="description" content="About the creators of Refugee Pal">
     <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b7f18fe09b.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -15,40 +15,53 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-
-    <nav>
-        <div class="left">
-            <h2 style="color: white; margin: 0;">Refugee Pal</h2>
-        </div>
-        <div class="right">
-            <a href="index.html"> <b>Home</b></a>
-            <a href="guides.html"><b>Guides</b></a>
-            <a href="doctors.html"><b>Connect with Professionals</b></a>
-            <a href="find.html"><b>Find</b></a>
-        </div>
-    </nav>
-</header>
+    <header>
+        <nav id="navbar">
+                    <div class="left">
+                <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
+            </div>
+            <div class="right">
+                <a href="index.html"><i class="fa-solid fa-house" style="color: white; font-size: 30px; margin-left: 0;"></i> Home</a>
+                <a href="guides.html"><i class="fa-solid fa-file-audio" style="color: white; font-size: 30px; margin-left: 0;"></i> Guides</a>
+                <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group" style="color: white; font-size: 30px; margin-left: 0;" ></i> Digital Resource Hub</a>
+                <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie" style="color: white; font-size: 30px; margin-left: 0;"></i>Connect with Professionals</a>
+                <a href="find.html"><i class="fa-solid fa-map-location-dot" style="color: white; font-size: 30px; margin-left: 0;"></i> Find</a>
+            </div>
+          </nav>
+          
+          <script>
+          const navbar = document.querySelector("#navbar");
+          const sticky = navbar.offsetTop;
+          
+          window.onscroll = function() {
+            if (window.pageYOffset >= sticky) {
+              navbar.classList.add("sticky");
+            } else {
+              navbar.classList.remove("sticky");
+            }
+          };
+          </script>
+    </header>
 
 <div class="container-fluid h-100">
     <div class="row h-100">
         <div class="col d-flex justify-content-center align-items-center">
             <form action="#" class="block">
-                <h2>Connect with a Healthcare Professional</h2><br>
-                <label for="lang">Language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <select id="lang">
+                <h2 style="color: #2c2d2c;">Connect with a Healthcare Professional</h2><br>
+                <label for="lang" >Language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select id="lang" style="padding: 5px; margin: 5px; border-radius: 15px; border: solid #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
                     <option value="arabic">Arabic</option>
                     <option value="pashto">Pashto</option>
                     <option value="farsi">Farsi (Persian)</option>
                     <option value="ukrainian">Ukrainian</option>
                 </select><br>
-                <label for="type">I want to see a&nbsp;</label>
-                <select id="type">
+                <label for="type">Profession&nbsp;</label>
+                <select id="type" style="padding: 5px; margin: 5px; border-radius: 15px; border: solid #ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
                     <option value="doctor">Doctor/Physician</option>
                     <option value="psychologist">Psychologist</option>
                     <option value="counsellor">Counsellor</option>
                 </select><br>
-                <button type="submit" id="submit-button">Go</button>
+                <button type="submit" id="submit-button" style="padding:10px; font-weight: bold; width: 75px; margin-top: 10px;">Go</button>
             </form>
         </div>
         <div class="col">
