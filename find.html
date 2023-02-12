@@ -7,6 +7,7 @@
         <meta name="description" content="About the creators of Refugee Pal">
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
+        <script src="findData.js"></script>
         <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
         <style>
             nav {
@@ -28,6 +29,7 @@
                     <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie" style="color: white; font-size: 30px; margin-left: 0;"></i>Connect with Professionals</a>
                     <a href="find.html"><i class="fa-solid fa-map-location-dot" style="color: white; font-size: 30px; margin-left: 0;"></i> Find</a>
                 </div>
+
               </nav>
               
               <script>
@@ -43,48 +45,16 @@
               };
               </script>
         </header>
+
         <main>
             <div class="mapContainer">
-                <div class="mapContainerLeft">
+                <div class="mapContainerLeft" id="leftContainer">
                     <div class="map addLeft addRight" id="image"></div>
-                    <div class="map addLeft addRight" id="name">Muslim Food Bank and Community Services<br><span id="address">12941 115 Ave #104, Surrey, BC V320E2</span></div>
+                    <div class="map addLeft addRight" id="name"><span id="heading">Muslim Food Bank and Community Services</span><br><span id="address">12941 115 Ave #104, Surrey, BC V320E2</span></div>
                     <div class="map addLeft" id="website"><a href="https://muslimfoodbank.com"><i class="fa-solid fa-link"></i><br><b>Link</b></a></div>
                     <div class="map addRight" id="directions"><a href="https://www.google.com/maps/dir//muslim+food+bank+and+community+services+surrey"><i class="fa-solid fa-compass"></i><br><b>Directions</b></a></div>
                     <div class="map" id="phone"><a href="tel:+18662483868"><i class="fa-solid fa-phone"></i><br><b>Phone</b></a></div>
-                    <div class="map addLeft" id="hours">
-                        <table>
-                            <caption>Hours</caption>
-                            <tr>
-                                <td>Mon.&nbsp;</td>
-                                <td><time>9AM</time>-<time>1PM</time></td>
-                            </tr>
-                            <tr>
-                                <td>Tues.&nbsp;</td>
-                                <td><time>9AM</time>-<time>1PM</time></td>
-                            </tr>
-                            <tr>
-                                <td>Wed.&nbsp;</td>
-                                <td><time>9AM</time>-<time>1PM</time></td>
-                            </tr>
-                            <tr>
-                                <td>Thurs.&nbsp;&nbsp;</td>
-                                <td><time>9AM</time>-<time>1PM</time></td>
-                            </tr>
-                            <tr>
-                                <td>Fri.&nbsp;</td>
-                                <td style="color: red;">Closed</td>
-                            </tr>
-                            <tr>
-                                <td>Sat.&nbsp;</td>
-                                <td><time>10AM</time>-<time>1PM</time></td>
-                            </tr>
-                            <tr>
-                                <td>Sun.&nbsp;</td>
-                                <td style="color: red;">Closed</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="map addRight" id="description">
+                    <div class="map addRight addLeft" id="description">
                         <span>Description</span>
                         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam aliquam odio placeat nisi obcaecati voluptatibus laboriosam modi recusandae consequatur voluptatem dolorem delectus perferendis provident maiores exercitationem, tenetur eveniet neque.</div>
                     </div>
@@ -100,7 +70,7 @@
                     <div class="map" id="category" onclick="filter()">All &#9660;</div>
                     <div class="map" id="more"><a href="#">More on this Topic</a></div>
                     <div class="map addLeft" id="mapDiv"></div>
-                    <div class="map addLeft" id="list"></div>
+                    <ul class="map addLeft" id="list"></ul>
                 </div>
         </main>
     </body>
@@ -109,17 +79,80 @@
             let category = "All";
             let map;
             var i, newMarker;
-            var markers = [];
-            var locations = [
-                ['Mosaic Surrey Newcomers Centre', 49.132275300585775, -122.84446560491966, 'green', 'Learn English', '7134 King George Blvd #200, Surrey, BC'],
-                ['WorkBC Guildford', 49.1901159521042, -122.79920270345202, 'orange', 'Employment', '10334 152A St #202, Surrey, BC']
-            ];
-            var listHTML = '';
-                var HTMLTag = "</span><span class='embedListParameter'> ";
+            let markers = [];
+            let listHTML = '';
+            var newItem;
+            var list = document.getElementById("list");
+            var embed = document.getElementById("mapDiv");
+            var breakValue = "";
+            const heading = document.getElementById('name');
+            function markerClick(content) {
+                console.log('function executed');
+                console.log(content[0]);
+                document.getElementById('heading').innerHTML = content[0]['Name'];
+                document.getElementById('address').innerHTML = content[0]['Address'] + ', Surrey, BC';
+                document.getElementById('website').innerHTML = '<a href="'+ content[0]['Website'] + '"><i class="fa-solid fa-link"></i><br><b>Link</b></a>';
+                document.getElementById('directions').innerHTML = '<a href="https://www.google.com/maps/dir//' + content[0]['Directions'] + '"><i class="fa-solid fa-compass"></i><br><b>Directions</b></a>';
+                document.getElementById('description').innerHTML = '<span>Description</span><div>' + content[0]["Description"] + '</div>';
+            }
+            function reload() {
+                var info;
                 var newItem;
-                var list = document.getElementById("list");
-                var embed = document.getElementById("mapDiv");
+                listHTML = '';
+                for (i = 0; i < locations.length; i++) {
+                    info = locations[i];
+                    /* console.log(locations[i]["Category"]); */
+                    if (locations[i]['Category'] === category || locations[i]['Category'].includes(category) || category === "All") {
+                        titleLength = locations[i]['Name'].length;
+
+                        let empty = document.createElement("div");
+                        empty.className = "embedListItem";
+                        empty.innerHTML = "";
+
+                        let br = document.createElement("br");
+
+                        let parameter2 = document.createElement("span");
+                        parameter2.className = "embedListParameter";
+                        parameter2.id = "parameter2";
+                        parameter2.innerHTML = locations[i]['Address'] + ", Surrey, BC";
+
+                        let parameter1 = document.createElement("span");
+                        parameter1.className = "embedListParameter";
+                        parameter1.id = "parameter1";
+                        parameter1.innerHTML = locations[i]['Name'];
+
+                        let parameter3 = document.createElement("span");
+                        parameter3.className = "embedListParameter";
+                        parameter3.id = "parameter3";
+                        parameter3.innerHTML = locations[i]['Category'];
+
+                        let parameter4 = document.createElement("span");
+                        parameter4.className = "embedListParameter";
+                        parameter4.id = "parameter4";
+                        parameter4.innerHTML = locations[i]['Description'].slice(0, 80) + '...';
+
+                        console.log(typeof parameter1.outerHTML);
+                        console.log(parameter1.outerHTML);
+
+                        let parentElement = document.getElementById("list");
+                        empty.appendChild(parameter1);
+                        empty.appendChild(parameter2);
+                        empty.appendChild(parameter3);
+                        empty.appendChild(parameter4);
+                        empty.onclick = markerClick.bind(this, [info]);
+                        parentElement.appendChild(empty);
+                        console.log(empty);
+
+                    }
+                    
+
+                }
+                };
             function initMap() {
+                console.log(locations);
+                let lat;
+                let lng;
+                let markerColour;
                 map = new google.maps.Map(document.getElementById('mapDiv'), {
                 center: {lat: 49.181, lng: -122.846},
                 zoom: 12,
@@ -135,31 +168,50 @@
                 },
                 });
                 for (i = 0; i < locations.length; i++) {
-                    newMarker = new google.maps.Marker({
-                        position: {lat: locations[i][1], lng: locations[i][2]},
+                    (function(location) {
+                        lat = location['Directions'].slice(location['Directions'].indexOf('@') + 1);
+                        lat = Number(lat.slice(0, lat.lastIndexOf(',', lat.length - 9)).toString()); 
+                        lng = location['Directions'].slice(0, location['Directions'].lastIndexOf(','));
+                        lng = Number(lng.slice(lng.lastIndexOf(',') + 1).toString());
+                        console.log(lat);
+                        console.log(lng);
+                        if (location['Category'] === "Food Banks") {
+                        markerColour = "green";
+                        } else if (location['Category'] === "Employment") {
+                        markerColour = "ltblue";
+                        } else if (location['Category'] === "Place of Worship") {
+                        markerColour = "purple";
+                        } else if (location['Category'] === "Settlement") {
+                        markerColour = "yellow";
+                        } else if (location['Category'] === "Learn English"){
+                        markerColour = "orange";
+                        } else {
+                        markerColour = "red";
+                        }
+                        newMarker = new google.maps.Marker({
+                        position: {lat: lat, lng: lng},
                         map: map,
-                        title: locations[i][0],
-                        icon: 'https://maps.google.com/mapfiles/ms/icons/' + locations[i][3] + '-dot.png',
-                    });
-                    newMarker.category = locations[i][4];
-                    newMarker.setVisible(true);
-                    markers.push(newMarker);
-                }
-                for (var i = 0; i < locations.length; i++) {
-                        newItem = "<span class='embedListParameter'>" + locations[i][0] + HTMLTag + locations[i][4] + HTMLTag + locations[i][5] + HTMLTag + locations[i][6] + '</span>';
-                        listHTML += "<li class='embedListItem'>" + newItem + "</li>";
+                        icon: "http://maps.google.com/mapfiles/ms/icons/" + markerColour + "-dot.png"
+                        });
+                        newMarker.category = location['Category'];
+                        newMarker.addListener("click", function() { markerClick([location]) });
+                        newMarker.contents = location;
+                        newMarker.setVisible(true);
+                        markers.push(newMarker);
+                    })(locations[i]);
                     }
-                    list.innerHTML = ("<ul id='embedListContainer'>" + listHTML + "</ul>");
+                reload();
             }
             function changeCategory(newCategory) {
-                category = newCategory + ' ';
+                category = newCategory;
                 for (var i = 0; i < markers.length; i++) {
-                    if (markers[i].category === newCategory || newCategory==="All") {
+                    if (markers[i].category === newCategory || markers[i].category.includes(newCategory) ||newCategory ==="All") {
                         markers[i].setVisible(true);
                     } else {
                         markers[i].setVisible(false);
                     }
                 }
+                reload();
             }
 
             function transition(to) {
@@ -189,15 +241,16 @@
             }
 
             function filter() {
-                const dropDown = document.getElementById("category")
+                const dropDown = document.getElementById("category");
                 if (!isDown) {
-                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'All\')">All </li></ul>');
+                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Food Banks\')">Food Banks </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Place of Worship\')">Place of Worship </li><li onClick="changeCategory(\'Family\')">Family </li><li onClick="changeCategory(\'Youth\')">Youth </li><li onClick="changeCategory(\'Women\')">Women </li><li onClick="changeCategory(\'All\')">All </li></ul>');
                     isDown = true;
                 } else {
                     dropDown.innerHTML = (category + '&#9660;');
                     isDown = false;
                 }
             }
+
 
         </script>
 </html>

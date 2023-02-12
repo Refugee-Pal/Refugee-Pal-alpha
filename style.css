@@ -289,18 +289,14 @@ a {
 #website:hover, #phone:hover, #directions:hover {
     background-color: whitesmoke;
 }
-#hours {
-    grid-row: 17/28;
-    grid-column: 1/7;
-}
 
 #description {
-    grid-row: 17/28;
-    grid-column: 7/16;
+    grid-row: 17/23;
+    grid-column: 1/16;
 }
 
 #events {
-    grid-row: 28/45;
+    grid-row: 23/40;
     grid-column: 1/16;
 }
 
@@ -598,16 +594,34 @@ main {
 #embedListContainer {
     z-index: 999999;
     position: absolute;
+
     color: black;
+    background-color: white;
     list-style-type: none;
+    display: inline-block;
+    overflow-y: scroll;
 }
 
 .embedListItem {
     margin: 0.75rem;
+    padding: 0.1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
     border: 0.2rem black solid;
     border-radius: 0.5rem;
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
     box-shadow:rgb(0, 0, 0) 0.1rem 0.2rem;
+    height: max-content;
+    overflow: hidden;
+
+}
+
+.embedListParameter {
+    color: black;
+    font-size: 1.05rem;
+    display: inline;
+    max-width: 30vw;
+    line-height: 150%;
 }
 
 
@@ -684,6 +698,28 @@ iframe{
     font-weight: bold;
 }
 
+
+#parameter1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    float: left;
+
+}
+
+#parameter2 {
+    float: right;
+    text-align: right;
+}
+#parameter3 {
+    display: flex;
+    float: left;
+    max-width: 50%;
+}
+#parameter4 {
+    float: right;
+    text-align: right;
+}
+=======
 .search-container {
     display: flex;
     align-items: center;
@@ -740,3 +776,4 @@ iframe{
     
   
   }
+
