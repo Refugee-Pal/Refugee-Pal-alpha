@@ -15,12 +15,45 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaDF1nGqgbl1XRXxMWYcHbmrx2CH-VRvs&callback=initMap" async defer></script>
         <script>
             let map;
+            let locations = [
+                ['Mosaic Surrey Newcomers Centre', 49.132275300585775, -122.84446560491966, 'ltblue', 'Learn English', '7134 King George Blvd #200, Surrey, BC', 'Settlement services organization dedicated to welcoming and supporting refugees'],
+
+                ['WorkBC Guildford', 49.1901159521042, -122.79920270345202, 'orange', 'Employment', '10334 152A St #202, Surrey, BC', 'Government employment organization helping refugees find job opportunities'],
+
+                ['Muslim Food Bank & Community Services', 49.21191621257828, -122.86247614916165, 'green', 'Food Banks', '12941 115 Ave #104, Surrey, BC', 'Food bank welcoming refugees with special dietary needs'],
+
+                ['ISSofBC Welcome Centre Surrey', 49.190043533598555, -122.79926365336823, 'ltblue', ['Learn English', 'Employment'], '10334 152A St #301, Surrey, BC', 'Settlement organization providing free services and programs for refugees, including English classes and orientation']
+            ];
             function initMap() {
-            map = new google.maps.Map(document.getElementById("embed"), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8,
-            });
-}
+                map = new google.maps.Map(document.getElementById('mapDiv'), {
+                center: {lat: 49.181, lng: -122.846},
+                zoom: 12,
+                disableDefaultUI: true,
+                zoomControl: true,
+                restriction: {
+                    latLngBounds: {
+                    north: 49.5,
+                    south: 48.75,
+                    east: -121.5,
+                    west: -123.5,
+                    },
+                },
+                });
+                for (i = 0; i < locations.length; i++) {
+                    newMarker = new google.maps.Marker({
+                        position: {lat: locations[i][1], lng: locations[i][2]},
+                        map: map,
+                        title: locations[i][0],
+                        icon: 'https://maps.google.com/mapfiles/ms/icons/' + locations[i][3] + '-dot.png',
+                    });
+                    newMarker.category = locations[i][4];
+                    newMarker.addListener("click", console.log('ho ho ho ho'));
+                    newMarker.setVisible(true);
+                    markers.push(newMarker);
+                }
+                reload();
+                console.log(markers);
+            }
 
         </script>
 </html>
