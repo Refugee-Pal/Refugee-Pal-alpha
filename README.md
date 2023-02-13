@@ -26,4 +26,3 @@ Our web application provides essential resources and support to refugees settlin
 - <b> Q&A Chat Threads: </b> Ask questions and get answers from professionals, such as settlement workers, in a structured and organized manner, reducing the workload of settlement workers.
 
 - <b> Connect with Community: </b> Find and interact with members of your religious or ethnic community, or even other refugees, fostering a sense of belonging and community.
-
