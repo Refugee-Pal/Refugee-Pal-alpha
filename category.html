@@ -41,22 +41,76 @@ if (window.pageYOffset >= sticky) {
 </script>
 </header>
 <main class="categoryMain">
-    <h2 class="categoryHeading">Financial</h2>
-    <h2 class="secondaryHeader">Sub-Categories</h2>
+    <div id="categoryHeading"><h2 id="catName">Financial</h2><div id="category" class="catFilter" onclick="filter()">Change category &#9660;</div></div>
+    <h2 class="secondaryHeader">Detailed Topics</h2>
+    <ul class="carousel">
+        <li onClick="show()">item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+    <h2 class="secondaryHeader">Audio Guides</h2>
+    <ul class="carousel">
+        <li>item</li>
+        <li>item</li>
+        <li>More guides<br>coming soon!</li>
+    </ul>
+    <h2 class="secondaryHeader">Locations</h2>
     <ul class="carousel">
         <li>item</li>
         <li>item</li>
         <li>item</li>
         <li>item</li>
         <li>item</li>
-
     </ul>
-    <ul class="carousel">
-
-    </ul>
-    <ul class="carousel">
-
-    </ul>
+    <section id="pop">
+        <i class="fa-solid fa-xmark" onClick="hide()"></i>
+        <div>
+            <h2>Your Bank Account</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, autem! Earum, et. Libero numquam dolorem ratione accusamus dolore magnam porro, voluptate fuga. </p>
+            <h2>Useful Resources</h2>
+        </div>
+    </section>
 </main>
 </body>
+<script>
+    var category = "All";
+    const popUp = document.getElementById("pop");
+    const catHeading = document.getElementById("categoryHeading");
+    var isDown = false;
+    function show() {
+        popUp.style.display = "flex";
+    }
+    function hide() {
+        popUp.style.display = "none";
+    }
+    hide()
+    function changeCategory(newCategory) {
+        category = newCategory;
+        document.getElementById('catName').innerHTML = category;
+        if (category === 'Culture & Community') {
+            catHeading.style.backgroundImage = 'url(images/communityBanner.jpg)';
+        } else if (category === 'Settlement'){
+            catHeading.style.backgroundImage = 'url(images/settlementBanner.png)';
+        } else if (category === 'Healthcare'){
+            catHeading.style.backgroundImage = 'url(images/healthcareBanner.png)';
+        } else if (category === 'Employment'){
+            catHeading.style.backgroundImage = 'url(images/employmentBanner.png)';
+        } else if (category === 'Financial'){
+            catHeading.style.backgroundImage = 'url(images/financialBanner.png)';
+        } else if (category === 'Housing'){
+            catHeading.style.backgroundImage = 'url(images/housingBanner.jpg)';
+        }
+    }
+    function filter() {
+                const dropDown = document.getElementById("category");
+                if (!isDown) {
+                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Family\')">Family </li><li onClick="changeCategory(\'Youth\')">Youth </li><li onClick="changeCategory(\'Women\')">Women </li><li onClick="changeCategory(\'All\')">All </li></ul>');
+                    isDown = true;
+                } else {
+                    dropDown.innerHTML = ('Change category' + ' &#9660;');
+                    isDown = false;
+                }
+            }
+</script>
 </html>
