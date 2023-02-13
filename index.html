@@ -16,38 +16,42 @@
     </style>
     <body>
       <header>
-        <nav id="navbar">
-                    <div class="left">
-                <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
-            </div>
-            <div class="right">
-                <a href="index.html"><i class="fa-solid fa-house" style="color: white; font-size: 30px; margin-left: 0;"></i> Home</a>
-                <a href="guides.html"><i class="fa-solid fa-file-audio" style="color: white; font-size: 30px; margin-left: 0;"></i> Guides</a>
-                <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group" style="color: white; font-size: 30px; margin-left: 0;" ></i> Digital Resource Hub</a>
-                <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie" style="color: white; font-size: 30px; margin-left: 0;"></i>Connect with Professionals</a>
-                <a href="find.html"><i class="fa-solid fa-map-location-dot" style="color: white; font-size: 30px; margin-left: 0;"></i> Find</a>
-            </div>
-          </nav>
           
-          <script>
-          const navbar = document.querySelector("#navbar");
-          const sticky = navbar.offsetTop;
-          
-          window.onscroll = function() {
-            if (window.pageYOffset >= sticky) {
-              navbar.classList.add("sticky");
-            } else {
-              navbar.classList.remove("sticky");
-            }
-          };
-          </script>
-    </header>
-        <main>            
-          <div class="search-container">
-              <input type="text" placeholder="Search...">
-              <button class="search-icon">
-                <i class="fa fa-search"></i>
-              </button>
+    
+      <nav id="navbar">
+        <div class="left">
+    <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
+</div>
+<div class="right">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="guides.html"><i class="fa-solid fa-file-audio"></i> Guides</a>
+    <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
+    <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie"></i>Professionals
+    <a href="find.html"><i class="fa-solid fa-map-location-dot"></i> Find</a>
+</div>
+
+</nav>
+
+<script>
+const navbar = document.querySelector("#navbar");
+const sticky = navbar.offsetTop;
+
+window.onscroll = function() {
+if (window.pageYOffset >= sticky) {
+  navbar.classList.add("sticky");
+} else {
+  navbar.classList.remove("sticky");
+}
+};
+</script>
+</header>
+        <main>
+            <img src="images/refugeepalbanner.png" alt="main banner">
+            <div class="container search">
+                <form action="#">
+                  <input type="text" placeholder="Search...">
+                 <a href="find.html" id="homeMapLink">Go to Map</a>
+                </form>
             </div>
             <a href="find.html" id="homeMapLink">Go to Map</a>
           <img src="images/refugeepal-logo.png" class="logo">
@@ -62,8 +66,11 @@
               <a href="#" class="mainRightLink one">Event 1</a>
               <a href="#" class="mainLeftLink two" id="worship">Worship</a>
               <a href="#" class="mainLeftLink two" id="socialServices">Settlement</a>
-              <a href="#" class="mainLeftLink two" id="programs">Events & Programs</a>
+              <a href="#" class="mainLeftLink two" id="financial">Financial</a>
               <a href="#" class="mainRightLink two">Event 2</a>
+              <a href="#" class="mainLeftLink three" id="women">Women</a>
+              <a href="#" class="mainLeftLink three" id="youth">Youth</a>
+              <a href="#" class="mainLeftLink three" id="family">Family</a>
               <a href="#" class="mainRightLink three">Event 3</a>
             </div>
               

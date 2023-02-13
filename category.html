@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta title="Connect with a Professional">
+    <meta name="author" content="Antony Zhang & Ali Soufi">
+    <meta name="description" content="About the creators of Refugee Pal">
+    <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+<header>
+    <nav id="navbar">
+        <div class="left">
+    <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
+</div>
+<div class="right">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="guides.html"><i class="fa-solid fa-file-audio"></i> Guides</a>
+    <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
+    <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie"></i>Professionals
+    <a href="find.html"><i class="fa-solid fa-map-location-dot"></i> Find</a>
+</div>
+
+</nav>
+
+<script>
+const navbar = document.querySelector("#navbar");
+const sticky = navbar.offsetTop;
+
+window.onscroll = function() {
+if (window.pageYOffset >= sticky) {
+  navbar.classList.add("sticky");
+} else {
+  navbar.classList.remove("sticky");
+}
+};
+</script>
+</header>
+<main class="categoryMain">
+    <div id="categoryHeading"><h2 id="catName">Financial</h2><div id="category" class="catFilter" onclick="filter()">Change category &#9660;</div></div>
+    <h2 class="secondaryHeader">Detailed Topics</h2>
+    <ul class="carousel">
+        <li onClick="show()">item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+    <h2 class="secondaryHeader">Audio Guides</h2>
+    <ul class="carousel">
+        <li>item</li>
+        <li>item</li>
+        <li>More guides<br>coming soon!</li>
+    </ul>
+    <h2 class="secondaryHeader">Locations</h2>
+    <ul class="carousel">
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+    <section id="pop">
+        <i class="fa-solid fa-xmark" onClick="hide()"></i>
+        <div>
+            <h2>Your Bank Account</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, autem! Earum, et. Libero numquam dolorem ratione accusamus dolore magnam porro, voluptate fuga. </p>
+            <h2>Useful Resources</h2>
+        </div>
+    </section>
+</main>
+</body>
+<script>
+    var category = "All";
+    const popUp = document.getElementById("pop");
+    const catHeading = document.getElementById("categoryHeading");
+    var isDown = false;
+    function show() {
+        popUp.style.display = "flex";
+    }
+    function hide() {
+        popUp.style.display = "none";
+    }
+    hide()
+    function changeCategory(newCategory) {
+        category = newCategory;
+        document.getElementById('catName').innerHTML = category;
+        if (category === 'Culture & Community') {
+            catHeading.style.backgroundImage = 'url(images/communityBanner.jpg)';
+        } else if (category === 'Settlement'){
+            catHeading.style.backgroundImage = 'url(images/settlementBanner.png)';
+        } else if (category === 'Healthcare'){
+            catHeading.style.backgroundImage = 'url(images/healthcareBanner.png)';
+        } else if (category === 'Employment'){
+            catHeading.style.backgroundImage = 'url(images/employmentBanner.png)';
+        } else if (category === 'Financial'){
+            catHeading.style.backgroundImage = 'url(images/financialBanner.png)';
+        } else if (category === 'Housing'){
+            catHeading.style.backgroundImage = 'url(images/housingBanner.jpg)';
+        }
+    }
+    function filter() {
+                const dropDown = document.getElementById("category");
+                if (!isDown) {
+                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Family\')">Family </li><li onClick="changeCategory(\'Youth\')">Youth </li><li onClick="changeCategory(\'Women\')">Women </li><li onClick="changeCategory(\'All\')">All </li></ul>');
+                    isDown = true;
+                } else {
+                    dropDown.innerHTML = ('Change category' + ' &#9660;');
+                    isDown = false;
+                }
+            }
+</script>
+</html>
