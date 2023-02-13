@@ -15,20 +15,36 @@
         }
     </style>
     <body>
-        <header>
-        
-          <nav>
-            <div class="left">
-              <h2 style="color: white; margin: 0;">Refugee Pal</h2>
-            </div>
-            <div class="right">
-                <a href="index.html">Home</a>
-                <a href="guides.html">Guides</a>
-                <a href="connectwithprofessional.html">Connect with Professionals</a>
-                <a href="find.html">Find</a>
-            </div>
-          </nav> 
-        </header>
+      <header>
+          
+    
+      <nav id="navbar">
+        <div class="left">
+    <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
+</div>
+<div class="right">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="guides.html"><i class="fa-solid fa-file-audio"></i> Guides</a>
+    <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
+    <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie"></i>Professionals
+    <a href="find.html"><i class="fa-solid fa-map-location-dot"></i> Find</a>
+</div>
+
+</nav>
+
+<script>
+const navbar = document.querySelector("#navbar");
+const sticky = navbar.offsetTop;
+
+window.onscroll = function() {
+if (window.pageYOffset >= sticky) {
+  navbar.classList.add("sticky");
+} else {
+  navbar.classList.remove("sticky");
+}
+};
+</script>
+</header>
         <main>
             <img src="images/refugeepalbanner.png" alt="main banner">
             <div class="container search">
@@ -47,8 +63,11 @@
               <a href="#" class="mainRightLink one">Event 1</a>
               <a href="#" class="mainLeftLink two" id="worship">Worship</a>
               <a href="#" class="mainLeftLink two" id="socialServices">Settlement</a>
-              <a href="#" class="mainLeftLink two" id="programs">Events & Programs</a>
+              <a href="#" class="mainLeftLink two" id="financial">Financial</a>
               <a href="#" class="mainRightLink two">Event 2</a>
+              <a href="#" class="mainLeftLink three" id="women">Women</a>
+              <a href="#" class="mainLeftLink three" id="youth">Youth</a>
+              <a href="#" class="mainLeftLink three" id="family">Family</a>
               <a href="#" class="mainRightLink three">Event 3</a>
             </div>
               

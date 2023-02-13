@@ -21,15 +21,31 @@
             <nav>
                 <div class="left">
                   <h2 style="color: white; margin: 0;">Refugee Pal</h2>
+            <nav id="navbar">
+                        <div class="left">
+                    <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
                 </div>
                 <div class="right">
-                  <a href="index.html">Home</a>
-                  <a href="guides.html">Guides</a>
-                  <a href="connectwithprofessional.html">Connect with Professionals</a>
-                  <a href="find.html">Find</a>
                 </div>
               </nav> 
           </header>
+
+              </nav>
+              
+              <script>
+              const navbar = document.querySelector("#navbar");
+              const sticky = navbar.offsetTop;
+              
+              window.onscroll = function() {
+                if (window.pageYOffset >= sticky) {
+                  navbar.classList.add("sticky");
+                } else {
+                  navbar.classList.remove("sticky");
+                }
+              };
+              </script>
+        </header>
+
         <main>
             <div class="mapContainer">
                 <div class="mapContainerLeft" id="leftContainer">
@@ -163,7 +179,7 @@
                         markerColour = "green";
                         } else if (location['Category'] === "Employment") {
                         markerColour = "ltblue";
-                        } else if (location['Category'] === "Place of Worship") {
+                        } else if (location['Category'] === "Culture & Community") {
                         markerColour = "purple";
                         } else if (location['Category'] === "Settlement") {
                         markerColour = "yellow";
@@ -227,7 +243,7 @@
             function filter() {
                 const dropDown = document.getElementById("category");
                 if (!isDown) {
-                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Food Banks\')">Food Banks </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Place of Worship\')">Place of Worship </li><li onClick="changeCategory(\'Family\')">Family </li><li onClick="changeCategory(\'Youth\')">Youth </li><li onClick="changeCategory(\'Women\')">Women </li><li onClick="changeCategory(\'All\')">All </li></ul>');
+                    dropDown.innerHTML = (category + '&#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Food Banks\')">Food Banks </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Family\')">Family </li><li onClick="changeCategory(\'Youth\')">Youth </li><li onClick="changeCategory(\'Women\')">Women </li><li onClick="changeCategory(\'All\')">All </li></ul>');
                     isDown = true;
                 } else {
                     dropDown.innerHTML = (category + '&#9660;');
