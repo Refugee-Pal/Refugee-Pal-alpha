@@ -922,6 +922,7 @@ nav div a i.fa-solid {
     display: inline-block;
     margin: 0.75rem 0.9rem;
     padding: 0.5rem;
+    white-space: normal;
     list-style-type: none;
     flex-shrink: 0;
     outline: #4ca4bf 0.2rem solid;
@@ -951,10 +952,11 @@ nav div a i.fa-solid {
 #pop {
     display: flex;
     height: 100%;
-    width: 70vw;
+    width: 75vw;
     z-index: 100000000000000000000000;
     position:fixed;
-    box-shadow: gainsboro 0.5rem 0;
+    overflow-y: scroll;
+    font-size: 1.1rem;
     top: 0vh;
     padding: 0.5rem;
     background-color: whitesmoke;
@@ -964,18 +966,13 @@ nav div a i.fa-solid {
     font-size: 2.5rem;
     margin: 0;
     padding: 0.75rem;
-    display: block;
 }
 
 #pop div {
-    padding-top: 3rem;
+    padding: 0.5rem;
     width: 60vw;
 }
 
-#pop div p {
-    width: inherit;
-    padding-bottom: 3rem;
-}
 
 div div#category,  div div#category #dropDown{
     float: right;
@@ -1008,6 +1005,49 @@ div div#category,  div div#category #dropDown{
     padding: 0.5rem;
 }
 
-.refugeepalbanner {
+#nameContent {
+    font-weight:650;
+    font-size: 1.4rem;
+}
+
+#descriptionContent, .linkDescriptionContent {
+    font-size: 1.1rem;
+}
+.linkContent {
+    font-weight: 500;
+}
+
+.linkContent, .favImage {
+    display: inline-block !important;
+}
+
+.linkDescriptionContent {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.parentContent {
+    color: #4ca4bf;
+    border: #4ca4bf solid 0.15rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: #4ca4bf 0.75rem 0.4rem;
+    text-decoration: none;
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 
 }
+
+.parentContent:hover {
+    color: white;
+    background-color: #4ca4bf;
+    box-shadow:none;
+    margin-top: 1rem;
+    margin-left: 0.25rem;
+}
+
