@@ -7,6 +7,7 @@
     <meta name="description" content="About the creators of Refugee Pal">
     <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
     <link rel="stylesheet" href="style.css">
+    <script src="resourcesData.js"></script>
     <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -43,11 +44,7 @@ if (window.pageYOffset >= sticky) {
 <main class="categoryMain">
     <div id="categoryHeading"><h2 id="catName">Financial</h2><div id="category" class="catFilter" onclick="filter()">Change category &#9660;</div></div>
     <h2 class="secondaryHeader">Detailed Topics</h2>
-    <ul class="carousel">
-        <li onClick="show()">item</li>
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>
+    <ul class="carousel" id="topics">
     </ul>
     <h2 class="secondaryHeader">Audio Guides</h2>
     <ul class="carousel">
@@ -74,7 +71,6 @@ if (window.pageYOffset >= sticky) {
 </main>
 </body>
 <script>
-    var category = "All";
     const popUp = document.getElementById("pop");
     const catHeading = document.getElementById("categoryHeading");
     var isDown = false;
@@ -84,10 +80,10 @@ if (window.pageYOffset >= sticky) {
     function hide() {
         popUp.style.display = "none";
     }
-    hide()
     function changeCategory(newCategory) {
         category = newCategory;
         document.getElementById('catName').innerHTML = category;
+        var topics = document.getElementById('topics');
         if (category === 'Culture & Community') {
             catHeading.style.backgroundImage = 'url(images/communityBanner.jpg)';
         } else if (category === 'Settlement'){
@@ -101,6 +97,15 @@ if (window.pageYOffset >= sticky) {
         } else if (category === 'Housing'){
             catHeading.style.backgroundImage = 'url(images/housingBanner.jpg)';
         }
+        for (i = 0; i++; i<=subcategories.length) {
+            console.log(subcategories[0][i]['Parent']);
+            if (subcategories[i]['Parent'] === category) {
+                let desc = document.createElement('li');
+                desc.innerText = subcategories[i]['Parent'];
+                console.log(desc);
+                topics.appendChild(desc);
+            }
+        }
     }
     function filter() {
                 const dropDown = document.getElementById("category");
@@ -112,5 +117,7 @@ if (window.pageYOffset >= sticky) {
                     isDown = false;
                 }
             }
+    changeCategory('Housing');
+    hide();
 </script>
 </html>
