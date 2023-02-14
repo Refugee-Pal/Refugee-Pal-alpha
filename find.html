@@ -49,7 +49,7 @@
         <main>
             <div class="mapContainer">
                 <div class="mapContainerLeft" id="leftContainer">
-                    <div class="map addLeft addRight" id="image"></div>
+                    <div class="map addLeft addRight" id="image"> <img src="images/mapimage.png" alt=""></div>
                     <div class="map addLeft addRight" id="name"><span id="heading">Muslim Food Bank and Community Services</span><br><span id="address">12941 115 Ave #104, Surrey, BC V320E2</span></div>
                     <div class="map addLeft" id="website"><a href="https://muslimfoodbank.com"><i class="fa-solid fa-link"></i><br><b>Link</b></a></div>
                     <div class="map addRight" id="directions"><a href="https://www.google.com/maps/dir//muslim+food+bank+and+community+services+surrey"><i class="fa-solid fa-compass"></i><br><b>Directions</b></a></div>
@@ -228,13 +228,13 @@
                 const toggleOn = document.querySelector(".toggle-on");
             
                 if (!isOn) {
-                toggleOff.style.backgroundColor = "gray";
-                toggleOn.style.backgroundColor = "green";
+                toggleOff.style.backgroundColor = "white"; 
+                toggleOn.style.backgroundColor = "#4ca4bf";
                 isOn = true;
                 transition("list");
                 } else {
-                toggleOff.style.backgroundColor = "green";
-                toggleOn.style.backgroundColor = "gray";
+                toggleOff.style.backgroundColor = "#4ca4bf";
+                toggleOn.style.backgroundColor = "white"; 
                 isOn = false;
                 transition("map");
                 }
