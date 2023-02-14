@@ -82,7 +82,6 @@ if (window.pageYOffset >= sticky) {
         descriptionContent.id = "descriptionContent";
         descriptionContent.innerText = content[0]['Description'];
         popUp.appendChild(descriptionContent);
-        console.log(content[0]['Links'].length);
         for (i = 0; i< content[0]['Links'].length; i++) {
             const favImage = document.createElement('img');
             favImage.src = 'http://www.google.com/s2/favicons?domain=' + content[0]['Links'][i].slice(8);
@@ -116,7 +115,8 @@ if (window.pageYOffset >= sticky) {
     }
     function changeCategory(newCategory) {
         category = newCategory;
-        document.getElementById('catName').innerHTML = category;
+        document.getElementById('catName').innerText = category;
+        document.getElementById('topics').innerHTML = '';
         var topics = document.getElementById('topics');
         if (category === 'Culture & Community') {
             catHeading.style.backgroundImage = 'url(images/communityBanner.jpg)';
@@ -134,9 +134,8 @@ if (window.pageYOffset >= sticky) {
             catHeading.style.backgroundImage = 'url(images/englishBanner.png)';
         }
     console.log(subcategories);
+        
         for (i = 0;  i<subcategories.length ;i++) {
-            console.log('test');
-            console.log(subcategories[i]['Parent']);
             if (subcategories[i]['Parent'] === category) {
                 let desc = document.createElement('li');
                 desc.innerText = subcategories[i]['Topic'];
@@ -148,7 +147,7 @@ if (window.pageYOffset >= sticky) {
     function filter() {
                 const dropDown = document.getElementById("category");
                 if (!isDown) {
-                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Family\')">Family </li><li onClick="changeCategory(\'Youth\')">Youth </li><li onClick="changeCategory(\'Women\')">Women </li><li onClick="changeCategory(\'All\')">All </li></ul>');
+                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment (coming soon) </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Healthcare\')">Healthcare </li><li onClick="changeCategory(\'Legal Services\')">Legal Services </li><li onClick="changeCategory(\'Mental Health\')">Mental Health </li><li onClick="changeCategory(\'All\')">All </li></ul>');
                     isDown = true;
                 } else {
                     dropDown.innerHTML = ('Change category' + ' &#9660;');
