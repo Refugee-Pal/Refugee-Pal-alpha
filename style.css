@@ -23,17 +23,25 @@ body {
 #dropDown {
     list-style-type: none;
     position: absolute;
+    font-weight: 500;
     text-align: center;
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
+    color: #4ca4bf;
+    border: solid 1.5px #4ca4bf;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
     width: 18vw;
     z-index: 99999999;
     top: calc(10vh + 50px);
+
 }
 
+
 #dropDown li:hover {
-    background-color: black;
+    transition-duration: 500ms;
+    cursor: pointer;
+    background-color: #4ca4bf;
     z-index: 9999999;
+    color: white;
 }
 
 #dropDown li {
@@ -208,8 +216,16 @@ a {
 }
 
 .mapContainerRight .map,  .mapContainerRight .map a{
-    background-color: grey;
-    color: #fff;
+    background-color: white;
+    color: #4ca4bf;
+    font-weight: bold;
+    border-color: #4ca4bf;
+}
+.mapContainerRight .map:hover,  .mapContainerRight .map:hover a  {
+    background-color: #4ca4bf;
+    transition-duration: 500ms;
+    color: #fdfdfd;
+    font-weight: bold;
 }
 
 .fa-solid {
@@ -229,7 +245,7 @@ a {
     align-items: center;
     width: 20.09vw;
     height: 10.18vh;
-    justify-content: center;
+    justify-content: center;        
 }
 #category {
     grid-row: 1/3;
@@ -257,7 +273,7 @@ a {
 }
 
 .map {
-    border: 0.15rem black solid;
+    border: solid 0.1rem #4ca4bf;
     background-color: whitesmoke;
 }
 
@@ -268,8 +284,7 @@ a {
 #image {
     grid-row: 1/10;
     grid-column: 1/16;
-    background-image: url(images/muslimfoodbank.png);
-}
+}   
 
 #name {
     grid-row: 10/13;
@@ -294,7 +309,7 @@ a {
 }
 
 #website, #phone, #directions {
-    background-color: gainsboro;
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -318,15 +333,15 @@ a {
     font-weight: 400;
 }
 .addLeft {
-    border-left: 0.4rem black solid;
+    border-left: 0.4rem #4ca4bf;
 }
 
 .addRight {
-    border-right: 0.4rem black solid;
+    border-right: 0.4rem #4ca4bf;
 }
 
 .addBottom {
-    border-bottom: 0.4rem black solid;
+    border-bottom: 0.4rem #4ca4bf;
 }
 
 .mainLeftLink:hover, .mainRightLink:hover, td a.card:hover{
@@ -429,7 +444,7 @@ a.card {
     padding: 10px;
     width: 13vw;
     height: 13vw;
-    background-color:black;
+    background-color:#4ca4bf;
     margin:20px;
 }
 
@@ -438,14 +453,16 @@ a.card {
 }
 
 summary.guide {
-    background-color:rgb(0, 0, 0);
+    background-color:#ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 20px;
     font-weight: 500;
-    color: white;
+    color: #4ca4bf;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border: 1px solid;
-    margin: 0.2rem 0.2rem;
-    border-radius: 10px;
+    border: 1.5px solid;
+    border-radius: 20px;
     height: 75px;
 
 }
@@ -471,9 +488,10 @@ summary.guide {
 
 
 summary.guide:hover, #homeMapLink:hover, button:hover, .usefulinks:hover {
-    background-color: rgb(19, 19, 19);
+    background-color: #4ca4bf;
     transition-duration: 500ms;
     color: white;
+    border: solid 1.5px #4ca4bf;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -531,9 +549,11 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 19.25vw;
-    height: 9.5vh;
-    background-color: gray;
+    width: 20vw;
+    height: 10vh;
+    background-color: #4ca4bf;
+    -webkit-text-fill-color: white;
+    margin-top: 5px;
     cursor: pointer;
   }
   
@@ -543,22 +563,25 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     font-size: 1.2rem;
   }
   
   .toggle-container .toggle-off {
-    background-color: gray;
+    background-color: #ffffff;
+    color: #4ca4bf;
   }
   
   .toggle-container .toggle-on {
-    background-color: green;
+    background-color: #4ca4bf;
+    color: white;
+    
   }
 
 .usefulinks {
     display:flex;
     max-width: 200px;
-    background: black;
+    background: #4ca4bf;
     -webkit-text-fill-color: rgb(255, 255, 255);
     margin: 20px;
     padding: 10px;
@@ -621,10 +644,11 @@ main {
     padding: 0.1rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    border: 0.2rem black solid;
+    border: solid 1.75px #4ca4bf;
+    font-weight: normal;
     border-radius: 0.5rem;
     background-color: #f5f5f5;
-    box-shadow:rgb(0, 0, 0) 0.1rem 0.2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     height: max-content;
     overflow: hidden;
 
@@ -733,50 +757,125 @@ iframe{
     float: right;
     text-align: right;
 }
-.search-container {
-    display: flex;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50px;
-    border: solid #4ca4bf;
-    overflow: hidden;
-    margin:auto;
-    margin-top: 30px;
-    height: 60px;
-    width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
 
-  .search-container:hover {
-    background-color: #4ca4bf;
-    -webkit-text-fill-color: white;
-    transition-duration: 500ms;
-    margin-top: 45px;
+.search-container {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid #4ca4bf;
+    -webkit-text-fill-color: black;
+    border-radius: 25px;
+    overflow: hidden;
   }
   
   .search-container input[type="text"] {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 0 20px;
-    width: 100%;
-    font-size: 16px;
-  }
-  
-  .search-icon {
-    background-color: #4ca4bf;
-    margin: auto;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+    width: 90%;
     height: 100%;
-    padding: 0 20px;
-  }
-  
-  .search-icon i {
+    padding: 15px;
+    border: none;
+    outline: none;
     font-size: 18px;
   }
+  
+  .search-container .search-icon {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    width: 50px;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0 25px 25px 0;
+    border: 2px solid #4ca4bf;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-icon {
+    background-color: #4ca4bf;
+    color: white;
+  }
+  
+  .search-container {
+    border-color: #4ca4bf;
+    background-color: #4ca4bf;
+    color: white;
+  }
+  
+  .search-container:hover input[type="text"] {
+    -webkit-text-fill-color: white;
+    transition-duration: 500ms;
+    background-color: #4ca4bf;
+  }
+  
+  .search-container:hover .search-icon {
+    background-color: #4ca4bf;
+    color: #ffffff;
+  }
+
+  
+  .map-button2 {
+    display: block;
+    margin: auto;
+    width: 50%;
+    max-width: 150px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #4ca4bf;
+    -webkit-text-fill-color: #4ca4bf;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #4ca4bf;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: solid #4ca4bf;
+  }
+  
+  .map-button2:hover {
+    background-color: #4ca4bf;
+    -webkit-text-fill-color: #4ca4bf;
+    color: #ffffff;
+    border: solid #4ca4bf;
+  }
+  
+  .map-button a {
+    color: white;
+  }
+  
+  .map-button:hover {
+    background-color: white;
+    color: #4ca4bf;
+  }
+  
+  .map-button {
+    background-color: #4ca4bf;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 0;
+    cursor: pointer;
+  }
+  
+  .map-button a {
+    color: white;
+  }
+  
+  .map-button:hover {
+    background-color: white;
+    color: #4ca4bf;
+    padding: 8px;
+}
   
   .logo {
     display: block;
@@ -886,17 +985,19 @@ div div#category,  div div#category #dropDown{
 }
 
 #category.catFilter {
-    background-color: black;
-    border: 1px black solid;
+    background-color: rgb(255, 255, 255);
+    color: #4ca4bf;
+    width: fit-content;
+    font-weight: bold;
     border-radius: 1rem;
     padding: 2rem 3.5rem;
     margin-top: 2.5rem;
 }
 
 #category.catFilter:hover {
-    background-color: gray;
-    border: 1px gray solid;
+    background-color: #4ca4bf;
     transition-duration: 750ms;
+    color: white;
 }
 
 #catName {
