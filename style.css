@@ -175,8 +175,8 @@ a {
 }
 .mainContainer {
     display: grid;
-    grid-auto-rows: minmax(6vw, auto);
-    grid-template-columns: 1fr 1fr 1fr 1.3fr;
+    grid-auto-rows: minmax(7vw, auto);
+    grid-template-columns: 1fr 1fr 1fr;
     border: 20px solid whitesmoke;
 }
 
@@ -532,7 +532,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     width: 19.25vw;
-    height: 9.25vh;
+    height: 9.5vh;
     background-color: gray;
     cursor: pointer;
   }
