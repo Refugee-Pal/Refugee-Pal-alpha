@@ -21,7 +21,7 @@
 <div class="right">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
     <a href="guides.html"><i class="fa-solid fa-file-audio"></i> Guides</a>
-    <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
+    <a href="category.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
     <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie"></i>Professionals
     <a href="find.html"><i class="fa-solid fa-map-location-dot"></i> Find</a>
 </div>
@@ -132,10 +132,28 @@ if (window.pageYOffset >= sticky) {
             catHeading.style.backgroundImage = 'url(images/housingBanner.jpg)';
         } else if (category === 'Learn English') {
             catHeading.style.backgroundImage = 'url(images/englishBanner.png)';
+        } else if (category === 'Legal Services') {
+            catHeading.style.backgroundImage = 'url(images/legalBanner.jpg)';
+        } else {
+            catHeading.style.backgroundImage = 'url(images/noCatbanner.jpg)';
+            var elements = document.getElementsByClassName('carousel');
+            var elements2 = document.getElementsByClassName('secondaryHeader');
+            for (i=0; i<elements.length; i++) {
+                elements[i].style.display = 'none';
+                elements2[i].style.display = 'none';
+            }
+        }
+        if (category != 'Select a category to continue') {
+            var elements = document.getElementsByClassName('carousel');
+            var elements2 = document.getElementsByClassName('secondaryHeader');
+            for (i=0; i<elements.length; i++) {
+                elements[i].style.display = 'flex';
+                elements2[i].style.display = 'flex';
+            }
         }
     console.log(subcategories);
         
-        for (i = 0;  i<subcategories.length ;i++) {
+        for (var i = 0;  i<subcategories.length ;i++) {
             if (subcategories[i]['Parent'] === category) {
                 let desc = document.createElement('li');
                 desc.innerText = subcategories[i]['Topic'];
@@ -155,6 +173,7 @@ if (window.pageYOffset >= sticky) {
                 }
             }
     hide();
-    changeCategory('Housing');
+    console.log(localStorage.getItem('categoryRedir'))
+    changeCategory(localStorage.getItem('categoryRedir'));
 </script>
 </html>

@@ -25,7 +25,7 @@
 <div class="right">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
     <a href="guides.html"><i class="fa-solid fa-file-audio"></i> Guides</a>
-    <a href="digitalresourcehub.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
+    <a href="category.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
     <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie"></i>Professionals
     <a href="find.html"><i class="fa-solid fa-map-location-dot"></i> Find</a>
 </div>
@@ -43,6 +43,7 @@ if (window.pageYOffset >= sticky) {
   navbar.classList.remove("sticky");
 }
 };
+
 </script>
 </header>
         <main>
@@ -60,18 +61,14 @@ if (window.pageYOffset >= sticky) {
             
             <div></div>
             <div class="mainContainer">
-              <a href="#" class="mainLeftLink one" id="employment">Employment</a>
-              <a href="#" class="mainLeftLink one" id="english">Learn English</a>
-              <a href="#" class="mainLeftLink one" id="food">Food</a>
-              <a href="#" class="mainRightLink one">Event 1</a>
-              <a href="#" class="mainLeftLink two" id="worship">Worship</a>
-              <a href="#" class="mainLeftLink two" id="socialServices">Settlement</a>
-              <a href="#" class="mainLeftLink two" id="financial">Financial</a>
-              <a href="#" class="mainRightLink two">Event 2</a>
-              <a href="#" class="mainLeftLink three" id="women">Women</a>
-              <a href="#" class="mainLeftLink three" id="youth">Youth</a>
-              <a href="#" class="mainLeftLink three" id="family">Family</a>
-              <a href="#" class="mainRightLink three">Event 3</a>
+              <a href="category.html" class="mainLeftLink one" id="employment" onClick="localStorage.setItem('categoryRedir', 'Employment')">Employment</a>
+              <a href="category.html" class="mainLeftLink one" id="english" onClick="localStorage.setItem('categoryRedir', 'Learn English')">Learn English</a>
+              <a href="category.html" class="mainLeftLink one" id="food" onClick="localStorage.setItem('categoryRedir', 'Housing')">Housing</a>
+              <a href="category.html" class="mainLeftLink two" id="worship" onClick="localStorage.setItem('categoryRedir', 'Culture & Community')">Culture & Community</a>
+              <a href="category.html" class="mainLeftLink two" id="socialServices" onClick="localStorage.setItem('categoryRedir', 'Settlement')">Settlement</a>
+              <a href="category.html" class="mainLeftLink two" id="financial" onClick="localStorage.setItem('categoryRedir', 'Financial')">Financial</a>
+              <a href="category.html" class="mainLeftLink three" id="women" onClick="localStorage.setItem('categoryRedir', 'Medical')">Medical</a>
+              <a href="category.html" class="mainLeftLink three" id="family" onClick="localStorage.setItem('categoryRedir', 'Legal Services')">Legal Services</a>
             </div>
               
         </main>
