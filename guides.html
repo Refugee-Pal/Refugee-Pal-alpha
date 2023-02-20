@@ -8,36 +8,46 @@
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
+        
     </head>
     <body>
         <header>
+          
+    
             <nav id="navbar">
-                <div class="left">
-            <h2 class="refugeepalheader"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></h2>
-        </div>
-        <div class="right">
-            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="guides.html"><i class="fa-solid fa-file-audio"></i> Guides</a>
-            <a href="category.html"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
-            <a href="connectwithprofessional.html"><i class="fa-solid fa-user-tie"></i>Professionals
-            <a href="find.html"><i class="fa-solid fa-map-location-dot"></i> Find</a>
-        </div>
-        
-        </nav>
-        
-        <script>
-        const navbar = document.querySelector("#navbar");
-        const sticky = navbar.offsetTop;
-        
-        window.onscroll = function() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky");
-        } else {
-          navbar.classList.remove("sticky");
-        }
-        };
-        </script>
-        </header>
+              <div class="left">
+                  <a class="refugeepalheader navLink" href="index.html"><i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: white;"></i><em> Refugee Pal</em></a>
+              </div>
+              <div class="right">
+                  <a href="guides.html" class="navLink"><i class="fa-solid fa-file-audio"></i> Guides</a>
+                  <a href="category.html" class="navLink"><i class="fa-solid fa-layer-group"></i>Digital Resources</a>
+                  <a href="connectwithprofessional.html" class="navLink"><i class="fa-solid fa-user-tie"></i>Professionals
+                  <a href="find.html" class="navLink"><i class="fa-solid fa-map-location-dot"></i> Find</a>
+                  <div id="google_translate_element"></div>
+                  <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+              </div>
+    
+          </nav>
+    
+    <script>
+    const navbar = document.querySelector("#navbar");
+    const sticky = navbar.offsetTop;
+    
+    window.onscroll = function() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+    };
+    
+    </script>
+    </header>
         <main>
             <table>
             <tr>
