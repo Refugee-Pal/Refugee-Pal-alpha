@@ -16,6 +16,10 @@ html, body {
     height: 100%;
 }
 
+body {
+    top: 0 !important;
+}
+
 
 #dropDown {
     list-style-type: none;
@@ -1049,8 +1053,9 @@ div div#category,  div div#category #dropDown{
 }
 
 main {
-    padding-top: 0;
+    padding-top: 39px;
 }
+
 
 .refugeepalheader {
     color: white;
@@ -1058,4 +1063,8 @@ main {
     margin-top: 0 !important;
     padding: 0.25rem;
     font-weight: bold;
+}
+
+.refugeepalbanner {
+    padding-top: 3vh;
 }
