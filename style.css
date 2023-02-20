@@ -509,7 +509,7 @@ nav {
     z-index: 99999999;
   }
 
-nav a {
+nav .navLink {
     color: #ffffff;
     background-color: #4ca4bf;
     text-decoration: none;
@@ -523,7 +523,7 @@ nav a {
     
   }
 
-nav a:hover {
+nav .navLink:hover {
     background-color: #ffffff;
     -webkit-text-fill-color: #4ca4bf;
     transition-duration: 500ms;
@@ -1051,3 +1051,14 @@ div div#category,  div div#category #dropDown{
     margin-left: 0.25rem;
 }
 
+#\:2\.container {
+    display: none !important;
+  } 
+#google_translate_element {
+    z-index: 99999999999999999999999;
+    all:revert;
+}
+
+main {
+    padding-top: 35px;
+}
