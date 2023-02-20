@@ -16,9 +16,6 @@ html, body {
     height: 100%;
 }
 
-body {
-    padding-top: 20px;
-}
 
 #dropDown {
     list-style-type: none;
@@ -728,14 +725,6 @@ iframe{
     text-align: center;
 }
 
-.refugeepalheader {
-    color: white;
-    font-size: 32px;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-weight: bold;
-}
-
 
 #parameter1 {
     font-size: 1.2rem;
@@ -1060,5 +1049,13 @@ div div#category,  div div#category #dropDown{
 }
 
 main {
-    padding-top: 35px;
+    padding-top: 0;
+}
+
+.refugeepalheader {
+    color: white;
+    font-size: 32px;
+    margin-top: 0 !important;
+    padding: 0.25rem;
+    font-weight: bold;
 }
