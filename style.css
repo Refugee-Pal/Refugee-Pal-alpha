@@ -30,9 +30,9 @@ body {
     color: #4ca4bf;
     border: solid 1.5px #4ca4bf;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
-    width: 18vw;
+    width: 20vw;
     z-index: 99999999;
-    top: calc(10vh + 50px);
+    top: 20vh;
 
 }
 
@@ -196,6 +196,7 @@ a {
     max-height: 89.9vh;
     max-width:fit-content;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .mapContainerRight {
@@ -219,14 +220,14 @@ a {
 .mapContainerRight .map,  .mapContainerRight .map a{
     background-color: white;
     color: #4ca4bf;
-    font-weight: bold;
+    font-weight: 600;
     border-color: #4ca4bf;
 }
 .mapContainerRight .map:hover,  .mapContainerRight .map:hover a  {
     background-color: #4ca4bf;
     transition-duration: 500ms;
     color: #fdfdfd;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .fa-solid {
@@ -269,6 +270,7 @@ a {
     z-index: 1000000;
 }
 .mapContainer {
+    padding-top: 3vh;
     display: grid;
     grid-auto-flow: column;
 }
@@ -357,7 +359,11 @@ a {
 
  .guide {
     margin-top: 1.5rem;
-    width: 25vw;
+    width: 30vw;
+}
+
+img.guide {
+    width: 20vw;
 }
 
 caption, #description span{
@@ -413,7 +419,6 @@ label, select {
 }
 
 summary.guide, div.guide {
-    width: 70vw;
     margin:0;
     float:left;
     padding-left: 5vw;
@@ -421,6 +426,7 @@ summary.guide, div.guide {
 
 td.lcard {
     vertical-align: top;
+    width: 35vw;
     display: flexbox;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -435,7 +441,7 @@ td a.card, #homeMapLink {
 td.guide {
     display: flexbox;
     vertical-align: top;
-    gap: 1rem;
+    padding-left: 2rem;
     flex-wrap: wrap;
 }
 
@@ -465,7 +471,7 @@ summary.guide {
     border: 1.5px solid;
     border-radius: 20px;
     height: 75px;
-
+    width: 60vw;
 }
 
 .invisible {
@@ -554,7 +560,6 @@ nav .navLink:hover {
     height: 10vh;
     background-color: #4ca4bf;
     -webkit-text-fill-color: white;
-    margin-top: 5px;
     cursor: pointer;
   }
   
@@ -890,7 +895,7 @@ nav div a i.fa-solid {
 
 #categoryHeading {
     padding: 6rem;
-    background-image: url(images/financialBanner.png);
+    background-image: url(images/noCatBanner.png);
     color: #fff;
     text-shadow: 1rem, rgb(0, 0, 0, 0.5);
     background-size: cover;
@@ -923,6 +928,7 @@ nav div a i.fa-solid {
     background-color: whitesmoke;
     box-shadow: rgb(76, 164, 191, 0.75) 0.75rem 0.5rem ;
     border-radius: 0.75rem;
+    
 }
 
 .carousel li:hover, .carousel li:active, .carousel a:hover, .carousel a:active {
@@ -967,7 +973,7 @@ nav div a i.fa-solid {
 }
 
 
-div div#category,  div div#category #dropDown{
+div div#category,  div div#category div.map #dropDown{
     float: right;
     top: 49vh;
 }
@@ -978,19 +984,21 @@ div div#category,  div div#category #dropDown{
 }
 
 #category.catFilter {
-    background-color: rgb(255, 255, 255);
-    color: #4ca4bf;
+    background-color: #4ca4bf;
+    color: whitesmoke;
     width: fit-content;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 1rem;
     padding: 2rem 3.5rem;
     margin-top: 2.5rem;
+    transition-duration: 750ms;
+    box-shadow: rgba(0, 0, 0, 0.4) 0.2rem 0.3rem;
 }
 
 #category.catFilter:hover {
-    background-color: #4ca4bf;
+    background-color: whitesmoke;
     transition-duration: 750ms;
-    color: white;
+    color: #4ca4bf;
 }
 
 #catName {
@@ -1053,7 +1061,7 @@ div div#category,  div div#category #dropDown{
 }
 
 main {
-    padding-top: 39px;
+    padding-top: 7vh;
 }
 
 
@@ -1067,4 +1075,11 @@ main {
 
 .refugeepalbanner {
     padding-top: 3vh;
+    height: 340px;
+    width: 100%;
+}
+
+.catDropDown {
+    top: 47.5vh !important;
+    z-index: 1 !important;
 }

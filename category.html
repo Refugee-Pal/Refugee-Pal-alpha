@@ -51,7 +51,7 @@ if (window.pageYOffset >= sticky) {
 </script>
 </header>
 <main class="categoryMain">
-    <div id="categoryHeading"><h2 id="catName">Financial</h2><div id="category" class="catFilter" onclick="filter()">Change category &#9660;</div></div>
+    <div id="categoryHeading"><h2 id="catName">Select a category to continue</h2><div id="category" class="catFilter" onclick="filter()">Change category &#9660;</div></div>
     <h2 class="secondaryHeader">Detailed Topics</h2>
     <ul class="carousel" id="topics">
     </ul>
@@ -77,6 +77,8 @@ if (window.pageYOffset >= sticky) {
 <script>
     const popUp = document.getElementById("pop");
     const catHeading = document.getElementById("categoryHeading");
+    const catName = document.getElementById("catName");
+    const accCategories = ["cultureandcommunity", "employment", "financial", "healthcare", "settlement", "housing", "legalservices", "mentalhealth"];
     var isDown = false;
     function show(content) {
         popUp.innerHTML = "<i class='fa-solid fa-xmark' onClick='hide()'></i>";
@@ -124,10 +126,30 @@ if (window.pageYOffset >= sticky) {
     }
     function changeCategory(newCategory) {
         category = newCategory;
+        var elements = document.getElementsByClassName('carousel');
+        var elements2 = document.getElementsByClassName('secondaryHeader');
         document.getElementById('catName').innerText = category;
         document.getElementById('topics').innerHTML = '';
         var topics = document.getElementById('topics');
-        if (category === 'Culture & Community') {
+        var truncatedCategory = category.replace(/\s/g, '').replace('&', 'and').toLowerCase();
+        console.log(truncatedCategory);
+        if (accCategories.includes(truncatedCategory)) {
+            for (i=0; i<elements.length; i++) {
+                elements[i].style.display = 'flex';
+                elements2[i].style.display = 'flex';
+            }
+        catHeading.style.backgroundImage = 'url(images/' + truncatedCategory + 'Banner.png)';
+        catHeading.style.backgroundImage = 'url(images/' + truncatedCategory + 'Banner.jpg)';
+        } else {
+            catHeading.style.backgroundImage = 'url(images/noCatbanner.jpg)';
+            catName.innerText = 'Select a category to continue';
+            for (i=0; i<elements.length; i++) {
+                elements[i].style.display = 'none';
+                console.log('test');
+                elements2[i].style.display = 'none';
+            }
+        }
+        /* if (category === 'Culture & Community') {
             catHeading.style.backgroundImage = 'url(images/communityBanner.jpg)';
         } else if (category === 'Settlement'){
             catHeading.style.backgroundImage = 'url(images/settlementBanner.png)';
@@ -145,10 +167,12 @@ if (window.pageYOffset >= sticky) {
             catHeading.style.backgroundImage = 'url(images/legalBanner.jpg)';
         } else {
             catHeading.style.backgroundImage = 'url(images/noCatbanner.jpg)';
+            catName.innerText = 'Select a category to continue';
             var elements = document.getElementsByClassName('carousel');
             var elements2 = document.getElementsByClassName('secondaryHeader');
             for (i=0; i<elements.length; i++) {
                 elements[i].style.display = 'none';
+                console.log('test');
                 elements2[i].style.display = 'none';
             }
         }
@@ -159,7 +183,7 @@ if (window.pageYOffset >= sticky) {
                 elements[i].style.display = 'flex';
                 elements2[i].style.display = 'flex';
             }
-        }
+        } */
     console.log(subcategories);
         
         for (var i = 0;  i<subcategories.length ;i++) {
@@ -174,7 +198,7 @@ if (window.pageYOffset >= sticky) {
     function filter() {
                 const dropDown = document.getElementById("category");
                 if (!isDown) {
-                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment (coming soon) </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Healthcare\')">Healthcare </li><li onClick="changeCategory(\'Legal Services\')">Legal Services </li><li onClick="changeCategory(\'Mental Health\')">Mental Health </li><li onClick="changeCategory(\'All\')">All </li></ul>');
+                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown" class="catDropDown"><li onClick="changeCategory(\'Employment\')">Employment (coming soon) </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Healthcare\')">Healthcare </li><li onClick="changeCategory(\'Legal Services\')">Legal Services </li><li onClick="changeCategory(\'Mental Health\')">Mental Health </li><li onClick="changeCategory(\'All\')">All </li></ul>');
                     isDown = true;
                 } else {
                     dropDown.innerHTML = ('Change category' + ' &#9660;');

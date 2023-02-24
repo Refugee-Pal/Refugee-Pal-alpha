@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="map" id="category" onclick="filter()">All &#9660;</div>
-                    <div class="map" id="more"><a href="#">More on this Topic</a></div>
+                    <div class="map" id="more" onclick="redirCategory()"><a href="category.html">More on this Topic</a></div>
                     <div class="map addLeft" id="mapDiv"></div>
                     <ul class="map addLeft" id="list"></ul>
                 </div>
@@ -259,6 +259,9 @@
                     dropDown.innerHTML = (category + '&#9660;');
                     isDown = false;
                 }
+            }
+            function redirCategory() {
+                localStorage.setItem("categoryRedir", category);
             }
 
 
