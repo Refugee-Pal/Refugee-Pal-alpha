@@ -90,17 +90,21 @@ a {
 
 .mainLeftLink, .mainRightLink{
     text-align:center;
-    border-radius: 1rem;
-    background-color:black;
+    border-radius: 2rem;
     text-decoration: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .mainLeftLink, .mainRightLink {
-    border-left: 10px solid whitesmoke;
-    border-right: 10px solid whitesmoke;
-    border-top: 10px solid whitesmoke;
-    border-bottom: 10px solid whitesmoke;
+    border-left: 1.5px solid #4ca4bf;
+    border-right: 1.5px solid #4ca4bf;
+    border-top: 1.5px solid #4ca4bf;
+    border-bottom: 1.5px solid #4ca4bf;
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 350px;
+
 }
 
 .mainRightLink {
@@ -115,39 +119,58 @@ a {
 }
 
 #employment {
-    background-image: url(images/work.png);
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf;
+
 }
 
 #english {
-    background-image: url(images/english.png);
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf;
 }
 
 #food {
-    background-image: url(images/food.png);
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf;
 }
 
 #worship {
-    background-image: url(images/mosque.jpg);
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf;
 }
 
 #financial {
-    background-image: url(images/financial.png);
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf;
 }
 
 #family {
-    background-image: url(images/people.png);
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf;
 }
  #women {
-    background-image: url(images/women.png);
- }
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf; 
+}
 
  #socialServices {
-    background-image: url(images/heart.jpg);
- }
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf; 
+}
 
  #youth {
-    background-image: url(images/youth.png);
- }
+    font-size: 1.75rem;
+    font-weight: 550;
+    color: #4ca4bf; 
+}
 .mainLeftLink.one{
     grid-row-start: 1;
     grid-row-end: 4;
