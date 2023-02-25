@@ -68,6 +68,7 @@
                     <details id="guideemployment">
                         <summary class="guide">Employment</summary>
                     </details>
+
                     <details id="guidelearnenglish">
                         <summary class="guide">Learn English</summary>
                     </details>
@@ -92,6 +93,7 @@
                     <details id="guidehousing">
                         <summary class="guide">Housing</summary>
                     </details>
+
                 </td>
             </tr>
             </table>
@@ -113,6 +115,7 @@
                 document.getElementById("guideLinks").appendChild(link);
             }
         }
+
         function generateCards() {
             retrievedGuide = JSON.parse(localStorage.getItem('audiotoLoad'));
             console.log(retrievedGuide);
@@ -128,6 +131,7 @@
                 card.onclick = cardClick.bind(this, [guides[i]])
                 parentElement.appendChild(card);
             }
+
         }
         generateCards();
     </script>
