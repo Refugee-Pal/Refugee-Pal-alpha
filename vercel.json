@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": ".htaccess",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "out"
+      }
+    },
+    {
+      "src": "*",
+      "use": "@vercel/static",
+      "config": {
+        "distDir": "out"
+      }
+    }
+  ]
+}
