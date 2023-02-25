@@ -7,7 +7,7 @@
         <meta name="description" content="About the creators of Refugee Pal">
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
         <link rel="stylesheet" href="style.css">
-        <script src="findData.js"></script>
+        <script src="data.js"></script>
         <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="map" id="category" onclick="filter()">All &#9660;</div>
-                    <div class="map" id="more"><a href="#">More on this Topic</a></div>
+                    <div class="map" id="more" onclick="redirCategory()"><a href="category.html">More on this Topic</a></div>
                     <div class="map addLeft" id="mapDiv"></div>
                     <ul class="map addLeft" id="list"></ul>
                 </div>
@@ -111,7 +111,6 @@
                 listHTML = '';
                 for (i = 0; i < locations.length; i++) {
                     info = locations[i];
-                    /* console.log(locations[i]["Category"]); */
                     if (locations[i]['Category'] === category || locations[i]['Category'].includes(category) || category === "All") {
                         titleLength = locations[i]['Name'].length;
 
@@ -259,6 +258,9 @@
                     dropDown.innerHTML = (category + '&#9660;');
                     isDown = false;
                 }
+            }
+            function redirCategory() {
+                localStorage.setItem("categoryRedir", category);
             }
 
 
