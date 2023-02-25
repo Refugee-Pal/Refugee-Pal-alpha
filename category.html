@@ -7,7 +7,7 @@
     <meta name="description" content="About the creators of Refugee Pal">
     <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="resourcesData.js"></script>
+    <script src="data.js"></script>
     <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -51,14 +51,12 @@ if (window.pageYOffset >= sticky) {
 </script>
 </header>
 <main class="categoryMain">
-    <div id="categoryHeading"><h2 id="catName">Financial</h2><div id="category" class="catFilter" onclick="filter()">Change category &#9660;</div></div>
+    <div id="categoryHeading"><h2 id="catName">Select a category to continue</h2><div id="category" class="catFilter" onclick="filter()">Change category &#9660;</div></div>
     <h2 class="secondaryHeader">Detailed Topics</h2>
     <ul class="carousel" id="topics">
     </ul>
     <h2 class="secondaryHeader">Audio Guides</h2>
-    <ul class="carousel">
-        <li>item</li>
-        <li>item</li>
+    <ul class="carousel" id="guides">
         <li>More guides<br>coming soon!</li>
     </ul>
     <h2 class="secondaryHeader">Locations</h2>
@@ -77,6 +75,8 @@ if (window.pageYOffset >= sticky) {
 <script>
     const popUp = document.getElementById("pop");
     const catHeading = document.getElementById("categoryHeading");
+    const catName = document.getElementById("catName");
+    const accCategories = ["cultureandcommunity", "employment", "learnenglish", "financial", "healthcare", "settlement", "housing", "legalservices", "mentalhealth"];
     var isDown = false;
     function show(content) {
         popUp.innerHTML = "<i class='fa-solid fa-xmark' onClick='hide()'></i>";
@@ -119,48 +119,55 @@ if (window.pageYOffset >= sticky) {
         }
 
     }
+    function sendInfo(info) {
+        localStorage.setItem('audiotoLoad', JSON.stringify(info[0]));
+    }
     function hide() {
         popUp.style.display = "none";
     }
     function changeCategory(newCategory) {
         category = newCategory;
+        var elements = document.getElementsByClassName('carousel');
+        var elements2 = document.getElementsByClassName('secondaryHeader');
         document.getElementById('catName').innerText = category;
         document.getElementById('topics').innerHTML = '';
         var topics = document.getElementById('topics');
-        if (category === 'Culture & Community') {
-            catHeading.style.backgroundImage = 'url(images/communityBanner.jpg)';
-        } else if (category === 'Settlement'){
-            catHeading.style.backgroundImage = 'url(images/settlementBanner.png)';
-        } else if (category === 'Healthcare'){
-            catHeading.style.backgroundImage = 'url(images/healthcareBanner.png)';
-        } else if (category === 'Employment'){
-            catHeading.style.backgroundImage = 'url(images/employmentBanner.png)';
-        } else if (category === 'Financial'){
-            catHeading.style.backgroundImage = 'url(images/financialBanner.png)';
-        } else if (category === 'Housing'){
-            catHeading.style.backgroundImage = 'url(images/housingBanner.jpg)';
-        } else if (category === 'Learn English') {
-            catHeading.style.backgroundImage = 'url(images/englishBanner.png)';
-        } else if (category === 'Legal Services') {
-            catHeading.style.backgroundImage = 'url(images/legalBanner.jpg)';
+        var guide = document.getElementById('guides');
+        guide.innerHTML = '';
+        var truncatedCategory = category.replace(/\s/g, '').replace('&', 'and').toLowerCase();
+        console.log(truncatedCategory);
+        if (accCategories.includes(truncatedCategory)) {
+            catHeading.style.padding = '20vh 20vh 15vh 20vh';
+            for (i=0; i<elements.length; i++) {
+                elements[i].style.display = 'flex';
+                elements2[i].style.display = 'flex';
+            }
+            var fileName = 'images/' + truncatedCategory + 'Banner';
+            var imgPng = new Image();
+            imgPng.src = fileName + '.png';
+            imgPng.onerror = function() {
+                var imgJpg = new Image();
+                imgJpg.src = fileName + '.jpg';
+                imgJpg.onerror = function() {
+                    console.error('Could not find banner image for category: ' + truncatedCategory);
+                };
+                imgJpg.onload = function() {
+                    catHeading.style.backgroundImage = 'url(' + fileName + '.jpg)';
+                };
+            };
+            imgPng.onload = function() {
+                catHeading.style.backgroundImage = 'url(' + fileName + '.png)';
+            };
         } else {
             catHeading.style.backgroundImage = 'url(images/noCatbanner.jpg)';
-            var elements = document.getElementsByClassName('carousel');
-            var elements2 = document.getElementsByClassName('secondaryHeader');
+            catHeading.style.padding = '20vh 6rem 51.8vh 6rem';
+            catHeading.style.overflowY = 'hidden';
+            catName.innerText = 'Select a category to continue';
             for (i=0; i<elements.length; i++) {
                 elements[i].style.display = 'none';
                 elements2[i].style.display = 'none';
             }
         }
-        if (category != 'Select a category to continue') {
-            var elements = document.getElementsByClassName('carousel');
-            var elements2 = document.getElementsByClassName('secondaryHeader');
-            for (i=0; i<elements.length; i++) {
-                elements[i].style.display = 'flex';
-                elements2[i].style.display = 'flex';
-            }
-        }
-    console.log(subcategories);
         
         for (var i = 0;  i<subcategories.length ;i++) {
             if (subcategories[i]['Parent'] === category) {
@@ -170,11 +177,20 @@ if (window.pageYOffset >= sticky) {
                 topics.appendChild(desc);
             }
         }
+        for (var l = 0;  l<guides.length ;l++) {
+            if (guides[l]['Parent'] === category) {
+                let desc = document.createElement('a');
+                desc.innerText = guides[l]['Name'];
+                desc.href = "guides.html";
+                desc.onclick = sendInfo.bind(this, [guides[l]]);
+                guide.appendChild(desc);
+            }
+        }
     }
     function filter() {
                 const dropDown = document.getElementById("category");
                 if (!isDown) {
-                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown"><li onClick="changeCategory(\'Employment\')">Employment (coming soon) </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Healthcare\')">Healthcare </li><li onClick="changeCategory(\'Legal Services\')">Legal Services </li><li onClick="changeCategory(\'Mental Health\')">Mental Health </li><li onClick="changeCategory(\'All\')">All </li></ul>');
+                    dropDown.innerHTML = ('Change category' + ' &#9650; <ul id="dropDown" class="catDropDown"><li onClick="changeCategory(\'Employment\')">Employment (coming soon) </li><li onClick="changeCategory(\'Learn English\')">Learn English </li><li onClick="changeCategory(\'Housing\')">Housing </li><li onClick="changeCategory(\'Settlement\')">Settlement </li><li onClick="changeCategory(\'Financial\')">Financial </li><li onClick="changeCategory(\'Culture & Community\')">Culture & Community </li><li onClick="changeCategory(\'Healthcare\')">Healthcare </li><li onClick="changeCategory(\'Legal Services\')">Legal Services </li><li onClick="changeCategory(\'Mental Health\')">Mental Health </li><li onClick="changeCategory(\'All\')">All </li></ul>');
                     isDown = true;
                 } else {
                     dropDown.innerHTML = ('Change category' + ' &#9660;');
