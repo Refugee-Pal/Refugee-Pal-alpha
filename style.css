@@ -421,7 +421,6 @@ label, select {
 summary.guide, div.guide {
     margin:0;
     float:left;
-    padding-left: 5vw;
 } 
 
 td.lcard {
@@ -449,7 +448,7 @@ a.card {
     display: inline-flex;
     border-radius: 5px;
     padding: 10px;
-    width: 13vw;
+    width: 20vw;
     height: 13vw;
     background-color:#4ca4bf;
     margin:20px;
@@ -465,13 +464,15 @@ summary.guide {
     margin: auto;
     margin-top: 20px;
     font-weight: 500;
+    z-index: 2;
+    position: relative;
     color: #4ca4bf;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
     border: 1.5px solid;
     border-radius: 20px;
-    height: 75px;
     width: 60vw;
+    padding-left: 5vw;
 }
 
 .invisible {
@@ -586,10 +587,10 @@ nav .navLink:hover {
 
 .usefulinks {
     display:flex;
-    max-width: 200px;
+    max-width: 30vw;
     background: #4ca4bf;
     -webkit-text-fill-color: rgb(255, 255, 255);
-    margin: 20px;
+    margin: 15px;
     padding: 10px;
     border-radius: 10px;
     text-decoration:none;
@@ -894,7 +895,7 @@ nav div a i.fa-solid {
 }
 
 #categoryHeading {
-    padding: 6rem;
+    padding: 7rem;
     background-image: url(images/noCatBanner.png);
     color: #fff;
     text-shadow: 1rem, rgb(0, 0, 0, 0.5);
@@ -1082,4 +1083,31 @@ main {
 .catDropDown {
     top: 47.5vh !important;
     z-index: 1 !important;
+}
+
+.card {
+    height: 25vh;
+    width: 20vw;
+    margin: 0.5rem !important;
+    margin-top: -1rem !important;
+    color: white;
+    border: 0.1rem #4ca4bf solid;
+    background-color: #4ca4bf;
+    border-radius: 1.2rem;
+    transition-duration: 750ms;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px;
+}
+
+.card:hover {
+    color:#4ca4bf;
+    background-color: white;
+    border: 0.1rem #4ca4bf solid;
+    transition-duration: 750ms;
+}
+
+a {
+    text-decoration: none;
 }

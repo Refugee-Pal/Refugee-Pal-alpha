@@ -6,6 +6,7 @@
         <meta name="author" content="Antony Zhang & Ali Soufi">
         <meta name="description" content="About the creators of Refugee Pal">
         <link rel="icon" type="image/x-icon" href="images/refugeeicon.png">
+        <script src="data.js"></script>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/c8e5706a2f.js" crossorigin="anonymous"></script>
         
@@ -53,57 +54,43 @@
             <tr>
                 <td class="lcard" id="demo">
                     <img class="guide" src="images/audioicon.png" alt="Audio">
-                    <h2 class="audioHeader guide">Audio Guides</h2>
-                    <p class="guide">Discover a new way to navigate the resettlement process with our audio guides, specially crafted for refugees. Find the support you need with practical and informative guides covering topics such as employment, English classes, and more. Empower yourself with the knowledge and resources to succeed in your new home. Start listening now.</p>
-                    <h3 class="guide">More about Audio Guides:</h3>
-                    <audio class="guide" src="guides/audioguides.mp3" controls type="audio/mp3"></audio>
-                    <details>
-                        <summary><strong>Useful Links/Resources</strong></summary>
-                        <div>
-                        <a class="usefulinks" href="https://issbc.org/" target="_blank"><b>ISS of BC</b></a>
-                        </div>
-                        <a class="usefulinks" href="https://mosaicbc.org/" target="_blank"><b>Mosaic BC</b></a>
-                        <div>
-                        <a class="usefulinks" href="https://bcrefugeehub.ca/" target="_blank"><b>BC Refugee Hub</b></a>
-                        </div>
-                    </details>
+                    <h2 class="audioHeader guide" id="guideTitle">Audio Guides</h2>
+                    <p class="guide" id="guideDesc">Discover a new way to navigate the resettlement process with our audio guides, specially crafted for refugees. Find the support you need with practical and informative guides covering topics such as employment, English classes, and more. Empower yourself with the knowledge and resources to succeed in your new home. Start listening now.</p>
+                    <audio class="guide" id="guideAudio" src="guides/intro.mp3" controls type="audio/mp3"></audio>
+                    <div style="font-weight: 600; !important">Useful Links/Resources</div>
+                    <div id="guideLinks">
+                        <a class="usefulinks" href="https://issbc.org/" target="_blank">ISS of BC</a>
+                        <a class="usefulinks" href="https://mosaicbc.org/" target="_blank">MOSAIC</a>
+                        <a class="usefulinks" href="https://bcrefugeehub.ca/" target="_blank">BC Refugee Hub</a>
+                    </div>
                  </td>
                 <td class="guide">
-                    <details>
+                    <details id="guideemployment">
                         <summary class="guide">Employment</summary>
-                        <a class="card" href="#" onclick="workpermitfunction()"><strong>Applying for a Work Permit</strong></a>
                     </details>
-                    <details>
-                        <summary class="guide">English</summary>
-                        <a class="card" href="#" onclick="englishfunction()"><strong>Want to learn english? Start here</strong></a>
+                    <details id="guidelearnenglish">
+                        <summary class="guide">Learn English</summary>
                     </details>
-                    <details>
-                        <summary class="guide">Medical</summary>
+                    <details id="guidehealthcare">
+                        <summary class="guide">Healthcare</summary>
                     </details>
-                    <details>
+                    <details id="guidelegalservices">
                         <summary class=" guide">Legal Services</summary>
                     </details>
-                    <details>
-                        <summary class=" guide">Counselling</summary>
+                    <details id="guidementalhealth">
+                        <summary class="guide">Mental Health</summary>
                     </details>
-                    <details>
-                        <summary class="guide">Mosque</summary>
-                        <div class="guide">Lorem ipsum</div>
+                    <details id="guidecultureandcommunity">
+                        <summary class="guide">Culture & Community</summary>
                     </details>
-                    <details>
-                        <summary class="guide">Social Services</summary>
-                    </details>
-                    <details>
-                        <summary class="guide">Food</summary>
-                    </details>
-                    <details>
-                        <summary class="guide">Events</summary>
-                    </details>
-                    <details>
+                    <details id="guidesettlement">
                         <summary class="guide">Settlement</summary>
                     </details>
-                    <details>
-                        <summary class="guide">Adjusting to Canada</summary>
+                    <details id="guidefinancial">
+                        <summary class="guide">Financial</summary>
+                    </details>
+                    <details id="guidehousing">
+                        <summary class="guide">Housing</summary>
                     </details>
                 </td>
             </tr>
@@ -111,13 +98,37 @@
         </main>
     </body>
     <script>
-        function workpermitfunction() {
-        document.getElementById("demo").innerHTML = '<img class="guide" src="images/work.png" alt="Applying for a work Permit"><h2 class="audioHeader guide">Applying for a work permit</h2><p class="guide">In this guide, the narrator provides a brief explanation of what a work permit is, how to apply for one, and other important details like how long it may take. </p><audio class="guide" src="guides/workpermit.mp3" controls></audio><details><summary><strong>Useful Links/Resources</strong></summary> <div> <a class="usefulinks" href="https://issbc.org/" target="_blank"><b>ISS of BC</b></a> </div> <a class="usefulinks" href="https://mosaicbc.org/" target="_blank"><b>Mosaic BC</b></a> <div> <a class="usefulinks" href="https://bcrefugeehub.ca/" target="_blank"><b>BC Refugee Hub</b></a> </div></details>';
+        function cardClick(content) {
+            document.getElementById("guideTitle").innerText = content['Name'];
+            document.getElementById("guideDesc").innerText = content['Description'];
+            document.getElementById("guideAudio").src = "guides/" + content['File'] + ".mp3";
+            document.getElementById("guideAudio").type = "audio/mp3";
+            document.getElementById("guideLinks").innerHTML = "";
+            for (i=0; i<content['Links'].length; i++) {
+                let link = document.createElement("a");
+                link.classList.add("usefulinks");
+                link.href = content['Links'][i];
+                link.innerText = content['Names'][i];
+                link.target = "_blank";
+                document.getElementById("guideLinks").appendChild(link);
+            }
         }
-
-        function englishfunction() {
-            document.getElementById("demo").innerHTML = '<img class="guide" src="images/english.png" alt="Learning English"><h2 class="audioHeader guide">Want to Learn English? Get started here</h2><p class="guide">If you are confused on where to start here in Surrey to learn english, this is the perfect guide for you! The narrator will provide a simple explanation of all the steps you need to take to learn english, a big step to feeling more at home here in British Columbia.</p><audio class="guide" src="guides/learning english.mp3" controls></audio><details><summary><strong>Useful Links/Resources</strong></summary> <div> <a class="usefulinks" href="https://issbc.org/" target="_blank"><b>ISS of BC</b></a> </div> <a class="usefulinks" href="https://mosaicbc.org/" target="_blank"><b>Mosaic BC</b></a> <div> <a class="usefulinks" href="https://bcrefugeehub.ca/" target="_blank"><b>BC Refugee Hub</b></a> </div></details>';
-            
+        function generateCards() {
+            retrievedGuide = JSON.parse(localStorage.getItem('audiotoLoad'));
+            console.log(retrievedGuide);
+            if (retrievedGuide != null) {
+                cardClick(retrievedGuide);
+            }
+            for (i=0; i<guides.length;i++) {
+                let parentElement = document.getElementById("guide" + guides[i]['Parent'].replace(/\s/g, '').toLowerCase());
+                console.log("guide" + guides[i]['Parent']);
+                let card = document.createElement("div");
+                card.classList.add('card', 'guide');
+                card.innerText = guides[i]['Name'];
+                card.onclick = cardClick.bind(this, [guides[i]])
+                parentElement.appendChild(card);
+            }
         }
+        generateCards();
     </script>
 </html>
