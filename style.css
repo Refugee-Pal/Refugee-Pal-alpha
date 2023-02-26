@@ -582,8 +582,7 @@ nav .navLink:hover {
     align-items: center;
     width: 20vw;
     height: 10vh;
-    background-color: #4ca4bf;
-    -webkit-text-fill-color: white;
+
     cursor: pointer;
   }
   
@@ -593,7 +592,7 @@ nav .navLink:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+
     font-size: 1.2rem;
   }
   
@@ -781,61 +780,46 @@ iframe{
 }
 
 .search-container {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 500px;
     height: 50px;
-    margin: 0 auto;
     border: 2px solid #4ca4bf;
-    -webkit-text-fill-color: black;
     border-radius: 25px;
-    overflow: hidden;
+    margin: auto; 
   }
   
   .search-container input[type="text"] {
-    width: 90%;
+    flex: 1;
     height: 100%;
-    padding: 15px;
+    padding: 0 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     border: none;
     outline: none;
-    font-size: 18px;
   }
   
-  .search-container .search-icon {
-    position: absolute;
-    top: 0;
-    right: -25px;
+  .search-container button[type="submit"] {
     width: 50px;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #4ca4bf;
+    border: none;
     border-radius: 0 25px 25px 0;
-    border: 2px solid #4ca4bf;
+    color: #fff;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
   }
+  
+  .search-container button[type="submit"] i {
+    font-size: 20px;
+    line-height: 20px; 
+    margin: 0; 
+  }
+  
 
-  .search-icon {
-    background-color: #4ca4bf;
-    color: white;
-  }
-  
-  .search-container {
-    border-color: #4ca4bf;
-    background-color: #4ca4bf;
-    color: white;
-  }
-  
-  .search-container:hover input[type="text"] {
-    -webkit-text-fill-color: white;
-    transition-duration: 500ms;
-    background-color: #4ca4bf;
-  }
-  
-  .search-container:hover .search-icon {
-    background-color: #4ca4bf;
-    color: #ffffff;
-  }
 
   
   .map-button2 {
@@ -861,8 +845,7 @@ iframe{
   
   .map-button2:hover {
     background-color: #4ca4bf;
-    -webkit-text-fill-color: #4ca4bf;
-    color: #ffffff;
+    -webkit-text-fill-color: white;
     border: solid #4ca4bf;
   }
   
@@ -919,7 +902,6 @@ nav div a i.fa-solid {
 
 #categoryHeading {
     padding: 7rem;
-    background-image: url(images/noCatBanner.png);
     color: #fff;
     text-shadow: 1rem, rgb(0, 0, 0, 0.5);
     background-size: cover;
@@ -1016,7 +998,6 @@ div div#category,  div div#category div.map #dropDown{
     padding: 2rem 3.5rem;
     margin-top: 2.5rem;
     transition-duration: 750ms;
-    box-shadow: rgba(0, 0, 0, 0.4) 0.2rem 0.3rem;
 }
 
 #category.catFilter:hover {
@@ -1028,6 +1009,7 @@ div div#category,  div div#category div.map #dropDown{
 #catName {
     background-image: radial-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0));
     padding: 0.5rem;
+    border-radius: 25px;
 }
 
 #nameContent {
