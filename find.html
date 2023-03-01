@@ -237,16 +237,20 @@
                 const toggleOn = document.querySelector(".toggle-on");
             
                 if (!isOn) {
-                toggleOff.style.backgroundColor = "white"; 
-                toggleOn.style.backgroundColor = "#4ca4bf";
-                isOn = true;
-                transition("list");
-                } else {
-                toggleOff.style.backgroundColor = "#4ca4bf";
-                toggleOn.style.backgroundColor = "white"; 
-                isOn = false;
-                transition("map");
-                }
+            toggleOff.style.backgroundColor = "white";
+            toggleOff.style.color = "#4ca4bf";
+            toggleOn.style.backgroundColor = "#4ca4bf";
+            toggleOn.style.color = "white";
+            isOn = true;
+            transition("list");
+            } else {
+            toggleOff.style.backgroundColor = "#4ca4bf";
+            toggleOff.style.color = "white";
+            toggleOn.style.backgroundColor = "white";
+            toggleOn.style.color = "#4ca4bf"; 
+            isOn = false;
+            transition("map");
+            }
             }
 
             function filter() {
