@@ -64,8 +64,8 @@ body {
 }
 
 
-h1, .audioHeader{
-font-size: 2rem;
+.audioHeader{
+font-size: 1.75rem;
 font-weight: 700;
 }
 
@@ -88,31 +88,17 @@ a {
     transition-duration: 500ms;
 }
 
-.mainLeftLink, .mainRightLink{
+.mainLeftLink{
     text-align:center;
     border-radius: 2rem;
     text-decoration: none;
     color: rgb(0, 0, 0);
-}
-
-.mainLeftLink, .mainRightLink {
     border-left: 1.5px solid #4ca4bf;
     border-right: 1.5px solid #4ca4bf;
     border-top: 1.5px solid #4ca4bf;
     border-bottom: 1.5px solid #4ca4bf;
-    margin: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 400px;
-    height: 350px;
-
-}
-
-.mainRightLink {
-    border-top: 3px solid whitesmoke;
-    border-bottom: 3px solid whitesmoke;
-}
-
-.mainLeftLink {
+    width: 100%;
     background-position: center;
     background-size: cover;
     font-weight: 500;
@@ -207,7 +193,9 @@ a {
 }
 .mainContainer {
     display: grid;
-    grid-auto-rows: minmax(7vw, auto);
+    column-gap: 3vw;
+    row-gap: 5vh;
+    grid-auto-rows: minmax(6vw, auto);
     grid-template-columns: 1fr 1fr 1fr;
     border: 20px solid whitesmoke;
 }
@@ -372,7 +360,7 @@ a {
 
 .mainLeftLink:hover, .mainRightLink:hover, td a.card:hover{
     transition-duration: 500ms;
-    opacity: .8;
+    opacity: .7;
 }
 
 .audio {
@@ -610,7 +598,7 @@ nav .navLink:hover {
 .usefulinks {
     border: solid 1.5px #4ca4bf;
     display:flex;
-    max-width: 15vh;
+    max-width: 25vw;
     background: #4ca4bf;
     -webkit-text-fill-color: rgb(255, 255, 255);
     margin: 15px;
@@ -827,8 +815,7 @@ iframe{
   .map-button2 {
     display: block;
     margin: auto;
-    width: 50%;
-    max-width: 150px;
+    width: 10rem;
     font-weight: bold;
     margin-top: 20px;
     color: #4ca4bf;
@@ -838,7 +825,7 @@ iframe{
     border-radius: 20px;
     color: #4ca4bf;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.2rem;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -1076,7 +1063,9 @@ main {
 
 .refugeepalbanner {
     padding-top: 3vh;
+    margin-bottom: -2vh;
     width: 100%;
+    height: 57.5vh;
 }
 
 .catDropDown {
@@ -1109,4 +1098,10 @@ main {
 
 a {
     text-decoration: none;
+}
+
+#gradBackground {
+    background-image: linear-gradient(rgb(76, 164, 191, 0.5), rgb(76, 164, 191, 0.75), whitesmoke);
+    margin-top: 0;
+    padding: 1.5vh 0 2.5vh 0;
 }
