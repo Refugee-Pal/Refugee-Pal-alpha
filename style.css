@@ -890,14 +890,15 @@ nav div a i.fa-solid {
 }
 
 #categoryHeading {
-    padding: 7rem;
+    height: 55vh;
     color: #fff;
     text-shadow: 1rem, rgb(0, 0, 0, 0.5);
     background-size: cover;
 }
 
 #categoryHeading h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
+    box-shadow: rgb(0, 0, 0, 0.4) 5rem;
 }
 
 .carousel {
@@ -924,13 +925,14 @@ nav div a i.fa-solid {
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     border-radius: 0.75rem;
     font-weight: 550;
+    transition-duration: 750ms;
     
 }
 
 
 .secondaryHeader {
     margin: 0.4rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 650;
     color: #2c2d2c;
     display: inline;
@@ -980,6 +982,7 @@ div div#category,  div div#category div.map #dropDown{
     padding: 2rem 3.5rem;
     margin-top: 2.5rem;
     transition-duration: 750ms;
+    box-shadow: 0 0.3rem 0.5rem 0 rgb(0 0 0 / 40%);
 }
 
 #category.catFilter:hover {
@@ -1069,8 +1072,8 @@ main {
 }
 
 .catDropDown {
-    top: 47.5vh !important;
-    z-index: 1 !important;
+    top: 48vh !important;
+    z-index: 0 !important;
 }
 
 .card {

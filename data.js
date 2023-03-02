@@ -508,7 +508,7 @@ var guides = [
   },
   {
     Parent: 'Settlement',
-    Name: 'Getting Settled in Canada',
+    Name: 'Getting Settled in Canada (Arabic)',
     Description: "This guide provides a brief overview of the settlement process, including information on how to access settlement services, how to apply for permanent residency, and how to apply for citizenship.",
     Links:["https://issbc.org", "https://mosaicbc.org", "https://bcrefugeehub.ca"],
     Names:["ISSofBC" , "MOSAIC", "BC Refugee Hub"],
