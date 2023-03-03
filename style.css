@@ -1067,9 +1067,7 @@ main {
 .refugeepalbanner {
     padding-top: 3vh;
     margin-bottom: -2vh;
-    width: 100%;
-    height: 57.5vh;
-}
+    width: 100%;}
 
 .catDropDown {
     top: 48vh !important;
