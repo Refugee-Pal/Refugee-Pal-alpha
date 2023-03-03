@@ -1108,3 +1108,24 @@ a {
     margin-top: 0;
     padding: 1.5vh 0 2.5vh 0;
 }
+
+#bottomBar span {
+    float: right;
+}
+
+#bottomBar a {
+    color: whitesmoke;
+}
+
+#bottomBar a:hover {
+    color: white;
+}
+
+#bottomBar {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #4ca4bf;
+    padding: 0.5rem;
+    font-weight: 450;
+    margin-top: 1rem;
+}

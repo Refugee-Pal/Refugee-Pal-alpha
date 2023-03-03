@@ -100,8 +100,7 @@
         </main>
     </body>
     <script>
-        function cardClick(oldcontent) {
-            content = oldcontent[0]
+        function cardClick(content) {
             console.log(content);
             document.getElementById("guideTitle").innerText = content['Name'];
             document.getElementById("guideDesc").innerText = content['Description'];
@@ -121,11 +120,13 @@
             };
         }
         function clearStorage() {
-            localStorage.removeItem('audiotoLoad');
+            if (localStorage.getItem('audiotoLoad') === null) {
+                localStorage.removeItem('audiotoLoad');
+            }
         }
         function generateCards() {
             retrievedGuide = JSON.parse(localStorage.getItem('audiotoLoad'));
-            console.log(retrievedGuide);
+            console.log('thisguide' + JSON.stringify(retrievedGuide));
             if (retrievedGuide != null) {
                 cardClick(retrievedGuide);
             }
