@@ -2,10 +2,7 @@
 ## By Antony Zhang and Ali Soufi
 Our web application provides essential resources and support to refugees settling in British Columbia. With features like language accessibility, healthcare information, and a directory of useful locations, we aim to make the transition to their new home as smooth and stress-free as possible. By empowering refugees, we are building a brighter future for all.
 
-<p align="center">
-  <img src="images/refugeepal-logo.png" />
-</p>
-
+## View the newest version of Refugee Pal [here](https://github.com/AliSoufi42/refugeepal)
 ## Features:
 - <b> Digital Resource Hub: </b> Access a wealth of information, useful links, and other resources to support your journey, including topics on employment, healthcare, rent, and more.
 
@@ -15,7 +12,7 @@ Our web application provides essential resources and support to refugees settlin
 
 - <b> Accessibility for All: </b>Benefit from a user-friendly interface, multilingual support, and other accessibility features that make navigating your new life as simple and stress-free as possible.
 
-## Upcoming Features/In Progess:
+## Upcoming Features/In Progress:
 
 - <b> Expanded Audio Guides: </b> An improved database of audio guides in multiple languages, providing even more information and customization options.
 
